@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{247C4F87-1ADB-4E67-865F-233EE4700F29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Neptuno.My.MyApplication</StartupObject>
+    <RootNamespace>Neptuno</RootNamespace>
+    <AssemblyName>Neptuno</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Neptuno.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Neptuno.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono_logo_naval.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7C283DA6B4E8A278DB01F0394F870563833D4291</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Resistencia al avance_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="botones.Designer.vb">
+      <DependentUpon>botones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="botones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet_RT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_RT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_RT.vb">
+      <DependentUpon>DataSet_RT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Datos_casco.Designer.vb">
+      <DependentUpon>Datos_casco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Datos_casco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_apendices.Designer.vb">
+      <DependentUpon>Form_apendices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_apendices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_apendices_porcentaje.Designer.vb">
+      <DependentUpon>Form_apendices_porcentaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_apendices_porcentaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_apendices.Designer.vb">
+      <DependentUpon>Form_datos_apendices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_apendices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_fluido.Designer.vb">
+      <DependentUpon>Form_datos_fluido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_fluido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_forma_casco.Designer.vb">
+      <DependentUpon>Form_datos_forma_casco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_forma_casco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_propusion.Designer.vb">
+      <DependentUpon>Form_datos_propusion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_propusion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_proyecto.Designer.vb">
+      <DependentUpon>Form_datos_proyecto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_proyecto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_raire.Designer.vb">
+      <DependentUpon>Form_datos_raire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_datos_raire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos de entrada\form_datos_savitsky.Designer.vb">
+      <DependentUpon>form_datos_savitsky.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\form_datos_savitsky.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imagenes\Form_imagen_bulbo.Designer.vb">
+      <DependentUpon>Form_imagen_bulbo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="imagenes\Form_imagen_bulbo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_splash.Designer.vb">
+      <DependentUpon>Form_splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mdi_menu.Designer.vb">
+      <DependentUpon>Mdi_menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mdi_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos\Form_metodos.Designer.vb">
+      <DependentUpon>Form_metodos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos\Form_metodos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pruebas\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pruebas\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablas resultados\Forma_holtrop.Designer.vb">
+      <DependentUpon>Forma_holtrop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas resultados\Forma_holtrop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form_grafico.Designer.vb">
+      <DependentUpon>Form_grafico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form_grafico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form_reporte_holtrop_sin_base.Designer.vb">
+      <DependentUpon>Form_reporte_holtrop_sin_base.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form_reporte_holtrop_sin_base.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos y variables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Soluciones\Form_solucion_Holtrop_mennem.Designer.vb">
+      <DependentUpon>Form_solucion_Holtrop_mennem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Soluciones\Form_solucion_Holtrop_mennem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablas resultados\Forma_savitsky.Designer.vb">
+      <DependentUpon>Forma_savitsky.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas resultados\Forma_savitsky.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablas resultados\form_nomografo.Designer.vb">
+      <DependentUpon>form_nomografo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas resultados\form_nomografo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablas resultados\Form_redojcic.Designer.vb">
+      <DependentUpon>Form_redojcic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas resultados\Form_redojcic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="botones.resx">
+      <DependentUpon>botones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Datos_casco.resx">
+      <DependentUpon>Datos_casco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_apendices.resx">
+      <DependentUpon>Form_apendices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_apendices_porcentaje.resx">
+      <DependentUpon>Form_apendices_porcentaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_datos_apendices.resx">
+      <DependentUpon>Form_datos_apendices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_datos_fluido.resx">
+      <DependentUpon>Form_datos_fluido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_datos_forma_casco.resx">
+      <DependentUpon>Form_datos_forma_casco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_datos_propusion.resx">
+      <DependentUpon>Form_datos_propusion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_datos_proyecto.resx">
+      <DependentUpon>Form_datos_proyecto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_datos_raire.resx">
+      <DependentUpon>Form_datos_raire.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\form_datos_savitsky.resx">
+      <DependentUpon>form_datos_savitsky.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagenes\Form_imagen_bulbo.resx">
+      <DependentUpon>Form_imagen_bulbo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_splash.resx">
+      <DependentUpon>Form_splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mdi_menu.resx">
+      <DependentUpon>Mdi_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos\Form_metodos.resx">
+      <DependentUpon>Form_metodos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pruebas\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablas resultados\Forma_holtrop.resx">
+      <DependentUpon>Forma_holtrop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form_grafico.resx">
+      <DependentUpon>Form_grafico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form_reporte_holtrop_sin_base.resx">
+      <DependentUpon>Form_reporte_holtrop_sin_base.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_holtrop_sin_base.rdlc" />
+    <EmbeddedResource Include="Soluciones\Form_solucion_Holtrop_mennem.resx">
+      <DependentUpon>Form_solucion_Holtrop_mennem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablas resultados\form_nomografo.resx">
+      <DependentUpon>form_nomografo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablas resultados\Form_redojcic.resx">
+      <DependentUpon>Form_redojcic.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet_RT.xsc">
+      <DependentUpon>DataSet_RT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_RT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_RT.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet_RT.xss">
+      <DependentUpon>DataSet_RT.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\botones.datasource" />
+    <None Include="My Project\DataSources\Datos_casco.datasource" />
+    <None Include="My Project\DataSources\Datos_constantes.datasource" />
+    <None Include="My Project\DataSources\Form_apendices.datasource" />
+    <None Include="My Project\DataSources\Form_apendices_porcentaje.datasource" />
+    <None Include="My Project\DataSources\Form_datos_apendices.datasource" />
+    <None Include="My Project\DataSources\Form_datos_fluido.datasource" />
+    <None Include="My Project\DataSources\Form_datos_forma_casco.datasource" />
+    <None Include="My Project\DataSources\Form_datos_propusion.datasource" />
+    <None Include="My Project\DataSources\Form_reporte_holtrop.datasource" />
+    <None Include="My Project\DataSources\Form_solucion_Holtrop_mennem.datasource" />
+    <None Include="My Project\DataSources\Menu_principal.datasource" />
+    <None Include="My Project\DataSources\WindowsApplication1.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\WindowsApplication1.My.MySettings.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Resistencia al avance_ClaveTemporal.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icono_logo_naval.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

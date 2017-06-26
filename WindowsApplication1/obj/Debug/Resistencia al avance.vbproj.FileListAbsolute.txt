@@ -1,0 +1,35 @@
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia al avance.vbproj.GenerateResource.Cache
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\RdlCompile.cache
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\RdlCompile.compiled
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia_avance.exe
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia_avance.xml
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia_avance.pdb
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\bin\Debug\Resistencia_avance.exe.config
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\bin\Debug\Resistencia_avance.exe
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\bin\Debug\Resistencia_avance.pdb
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\bin\Debug\Resistencia_avance.xml
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia al avance.vbprojResolveAssemblyReference.cache
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\bin\Debug\Resistencia_avance.exe.manifest
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\bin\Debug\Resistencia_avance.application
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia_avance.exe.manifest
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Resistencia_avance.application
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.botones.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Datos_casco.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_apendices.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_apendices_porcentaje.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_datos_apendices.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_datos_fluido.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_datos_forma_casco.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_datos_propusion.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_datos_proyecto.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_datos_raire.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_splash.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.MDIParent1.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Mdi_menu.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_metodos.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Resources.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Forma_holtrop.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_grafico.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_reporte_holtrop_sin_base.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_solucion_Holtrop_mennem.resources
+C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_redojcic.resources
