@@ -53,17 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-558D2TEB\SQLEXPRESS;Initial Catalog=db_resistencia;Integrated "& _ 
-            "Security=True")>  _
-        Public ReadOnly Property db_resistenciaConnectionString() As String
-            Get
-                Return CType(Me("db_resistenciaConnectionString"),String)
-            End Get
-        End Property
     End Class
 End Namespace
 

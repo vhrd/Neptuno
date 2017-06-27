@@ -36,11 +36,12 @@ Partial Class Form_datos_forma_casco
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_area_transom = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txt_rea_seccion_media = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.txt_rea_seccion_media = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -94,6 +95,7 @@ Partial Class Form_datos_forma_casco
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.LinkLabel1)
         Me.GroupBox2.Controls.Add(Me.txt_centro_area_bulbo)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.txt_area_transv_bulbo)
@@ -168,6 +170,22 @@ Partial Class Form_datos_forma_casco
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Areas transversales"
         '
+        'txt_rea_seccion_media
+        '
+        Me.txt_rea_seccion_media.Location = New System.Drawing.Point(556, 78)
+        Me.txt_rea_seccion_media.Name = "txt_rea_seccion_media"
+        Me.txt_rea_seccion_media.Size = New System.Drawing.Size(116, 24)
+        Me.txt_rea_seccion_media.TabIndex = 7
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(47, 84)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(490, 18)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Area (sumergida) transversal de la sección media a velocidad cero (m^2):"
+        '
         'btn_salir
         '
         Me.btn_salir.Image = CType(resources.GetObject("btn_salir.Image"), System.Drawing.Image)
@@ -190,21 +208,15 @@ Partial Class Form_datos_forma_casco
         Me.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_guardar.UseVisualStyleBackColor = True
         '
-        'txt_rea_seccion_media
+        'LinkLabel1
         '
-        Me.txt_rea_seccion_media.Location = New System.Drawing.Point(556, 78)
-        Me.txt_rea_seccion_media.Name = "txt_rea_seccion_media"
-        Me.txt_rea_seccion_media.Size = New System.Drawing.Size(116, 24)
-        Me.txt_rea_seccion_media.TabIndex = 7
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(47, 84)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(490, 18)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Area (sumergida) transversal de la sección media a velocidad cero (m^2):"
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(214, 105)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(82, 18)
+        Me.LinkLabel1.TabIndex = 4
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Ver imagen"
         '
         'Form_datos_forma_casco
         '
@@ -245,4 +257,5 @@ Partial Class Form_datos_forma_casco
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents txt_rea_seccion_media As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class

@@ -39,7 +39,7 @@ Partial Class Form_solucion_Holtrop_mennem
         'btn_ejecutar
         '
         Me.btn_ejecutar.Image = CType(resources.GetObject("btn_ejecutar.Image"), System.Drawing.Image)
-        Me.btn_ejecutar.Location = New System.Drawing.Point(249, 128)
+        Me.btn_ejecutar.Location = New System.Drawing.Point(124, 128)
         Me.btn_ejecutar.Name = "btn_ejecutar"
         Me.btn_ejecutar.Size = New System.Drawing.Size(87, 38)
         Me.btn_ejecutar.TabIndex = 0
@@ -108,7 +108,7 @@ Partial Class Form_solucion_Holtrop_mennem
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(584, 109)
+        Me.GroupBox1.Size = New System.Drawing.Size(302, 109)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos para el analisis"
@@ -135,7 +135,7 @@ Partial Class Form_solucion_Holtrop_mennem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(608, 178)
+        Me.ClientSize = New System.Drawing.Size(332, 178)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_ejecutar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

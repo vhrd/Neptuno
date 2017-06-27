@@ -30,7 +30,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -185,28 +185,40 @@
     <Compile Include="Datos de entrada\form_datos_savitsky.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Datos de entrada\Form_factor_servicio.Designer.vb">
+      <DependentUpon>Form_factor_servicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos de entrada\Form_factor_servicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="imagenes\Form_imagen_bulbo.Designer.vb">
       <DependentUpon>Form_imagen_bulbo.vb</DependentUpon>
     </Compile>
     <Compile Include="imagenes\Form_imagen_bulbo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_splash.Designer.vb">
+    <Compile Include="imagenes\Form_imagen_eslora_mojada.Designer.vb">
+      <DependentUpon>Form_imagen_eslora_mojada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="imagenes\Form_imagen_eslora_mojada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imagenes\Form_imagen_manga_pantoque.Designer.vb">
+      <DependentUpon>Form_imagen_manga_pantoque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="imagenes\Form_imagen_manga_pantoque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu y splash\Form_splash.Designer.vb">
       <DependentUpon>Form_splash.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_splash.vb">
+    <Compile Include="Menu y splash\Form_splash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIParent1.Designer.vb">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MDIParent1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mdi_menu.Designer.vb">
+    <Compile Include="Menu y splash\Mdi_menu.Designer.vb">
       <DependentUpon>Mdi_menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Mdi_menu.vb">
+    <Compile Include="Menu y splash\Mdi_menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Metodos\Form_metodos.Designer.vb">
@@ -314,16 +326,22 @@
     <EmbeddedResource Include="Datos de entrada\form_datos_savitsky.resx">
       <DependentUpon>form_datos_savitsky.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Datos de entrada\Form_factor_servicio.resx">
+      <DependentUpon>Form_factor_servicio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="imagenes\Form_imagen_bulbo.resx">
       <DependentUpon>Form_imagen_bulbo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_splash.resx">
+    <EmbeddedResource Include="imagenes\Form_imagen_eslora_mojada.resx">
+      <DependentUpon>Form_imagen_eslora_mojada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagenes\Form_imagen_manga_pantoque.resx">
+      <DependentUpon>Form_imagen_manga_pantoque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu y splash\Form_splash.resx">
       <DependentUpon>Form_splash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIParent1.resx">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mdi_menu.resx">
+    <EmbeddedResource Include="Menu y splash\Mdi_menu.resx">
       <DependentUpon>Mdi_menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Metodos\Form_metodos.resx">

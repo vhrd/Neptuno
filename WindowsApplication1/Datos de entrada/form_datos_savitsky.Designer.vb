@@ -29,9 +29,16 @@ Partial Class form_datos_savitsky
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txt_Bp = New System.Windows.Forms.TextBox()
+        Me.txt_Bpx = New System.Windows.Forms.TextBox()
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txt_ie = New System.Windows.Forms.TextBox()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,14 +53,14 @@ Partial Class form_datos_savitsky
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(176, 30)
+        Me.TextBox1.Location = New System.Drawing.Point(357, 30)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 24)
         Me.TextBox1.TabIndex = 1
         '
         'txt_trim_dinamico
         '
-        Me.txt_trim_dinamico.Location = New System.Drawing.Point(176, 71)
+        Me.txt_trim_dinamico.Location = New System.Drawing.Point(357, 71)
         Me.txt_trim_dinamico.Name = "txt_trim_dinamico"
         Me.txt_trim_dinamico.Size = New System.Drawing.Size(100, 24)
         Me.txt_trim_dinamico.TabIndex = 3
@@ -61,16 +68,23 @@ Partial Class form_datos_savitsky
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(66, 74)
+        Me.Label2.Location = New System.Drawing.Point(94, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 18)
+        Me.Label2.Size = New System.Drawing.Size(259, 18)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "trim. dinamico"
+        Me.Label2.Text = "Angulo de trimado dinámico (Grados):"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LinkLabel3)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.txt_ie)
+        Me.GroupBox1.Controls.Add(Me.LinkLabel2)
+        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.txt_Bp)
+        Me.GroupBox1.Controls.Add(Me.txt_Bpx)
         Me.GroupBox1.Controls.Add(Me.txt_trim_dinamico)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -88,16 +102,16 @@ Partial Class form_datos_savitsky
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(94, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 18)
+        Me.Label3.Size = New System.Drawing.Size(213, 18)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Manga Bp"
+        Me.Label3.Text = "Manga en el pantoque Bpx (m):"
         '
-        'txt_Bp
+        'txt_Bpx
         '
-        Me.txt_Bp.Location = New System.Drawing.Point(176, 101)
-        Me.txt_Bp.Name = "txt_Bp"
-        Me.txt_Bp.Size = New System.Drawing.Size(100, 24)
-        Me.txt_Bp.TabIndex = 5
+        Me.txt_Bpx.Location = New System.Drawing.Point(357, 101)
+        Me.txt_Bpx.Name = "txt_Bpx"
+        Me.txt_Bpx.Size = New System.Drawing.Size(100, 24)
+        Me.txt_Bpx.TabIndex = 5
         '
         'btn_salir
         '
@@ -121,6 +135,68 @@ Partial Class form_datos_savitsky
         Me.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_guardar.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(94, 134)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(202, 18)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Eslora en el pantoque Lp (m):"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(357, 131)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 24)
+        Me.TextBox2.TabIndex = 7
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(479, 134)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(82, 18)
+        Me.LinkLabel1.TabIndex = 8
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Ver imagen"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(479, 104)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(82, 18)
+        Me.LinkLabel2.TabIndex = 9
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Ver imagen"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(94, 164)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(254, 18)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Angulo medio de entrada ie (Grados):"
+        '
+        'txt_ie
+        '
+        Me.txt_ie.Location = New System.Drawing.Point(357, 161)
+        Me.txt_ie.Name = "txt_ie"
+        Me.txt_ie.Size = New System.Drawing.Size(100, 24)
+        Me.txt_ie.TabIndex = 11
+        '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.AutoSize = True
+        Me.LinkLabel3.Location = New System.Drawing.Point(479, 164)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(82, 18)
+        Me.LinkLabel3.TabIndex = 12
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Ver imagen"
+        '
         'form_datos_savitsky
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -143,7 +219,14 @@ Partial Class form_datos_savitsky
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txt_Bp As System.Windows.Forms.TextBox
+    Friend WithEvents txt_Bpx As System.Windows.Forms.TextBox
     Friend WithEvents btn_salir As System.Windows.Forms.Button
     Friend WithEvents btn_guardar As System.Windows.Forms.Button
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txt_ie As System.Windows.Forms.TextBox
 End Class

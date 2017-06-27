@@ -40,6 +40,8 @@ Partial Class Mdi_menu
         Me.PropiedadesDelFluidoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ApendicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator13 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PlaneoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MetodosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeleccionarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InfomaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -82,9 +84,11 @@ Partial Class Mdi_menu
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton14 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.FactorDeServicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.pbBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -127,7 +131,7 @@ Partial Class Mdi_menu
         '
         'DATOSENTRADAToolStripMenuItem
         '
-        Me.DATOSENTRADAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosDelProyectoToolStripMenuItem, Me.ToolStripSeparator5, Me.CASCOToolStripMenuItem, Me.ToolStripSeparator4, Me.FormaDelCascoToolStripMenuItem, Me.ToolStripSeparator3, Me.PropulsiónToolStripMenuItem, Me.ToolStripSeparator2, Me.PropiedadesDelFluidoToolStripMenuItem, Me.ToolStripSeparator1, Me.ApendicesToolStripMenuItem})
+        Me.DATOSENTRADAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosDelProyectoToolStripMenuItem, Me.ToolStripSeparator5, Me.CASCOToolStripMenuItem, Me.ToolStripSeparator4, Me.FormaDelCascoToolStripMenuItem, Me.ToolStripSeparator3, Me.PropulsiónToolStripMenuItem, Me.ToolStripSeparator2, Me.PropiedadesDelFluidoToolStripMenuItem, Me.ToolStripSeparator1, Me.ApendicesToolStripMenuItem, Me.ToolStripSeparator13, Me.PlaneoToolStripMenuItem, Me.ToolStripSeparator14, Me.FactorDeServicioToolStripMenuItem})
         Me.DATOSENTRADAToolStripMenuItem.Name = "DATOSENTRADAToolStripMenuItem"
         Me.DATOSENTRADAToolStripMenuItem.Size = New System.Drawing.Size(108, 20)
         Me.DATOSENTRADAToolStripMenuItem.Text = "Datos de entrada"
@@ -193,6 +197,17 @@ Partial Class Mdi_menu
         Me.ApendicesToolStripMenuItem.Name = "ApendicesToolStripMenuItem"
         Me.ApendicesToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.ApendicesToolStripMenuItem.Text = "Apendices"
+        '
+        'ToolStripSeparator13
+        '
+        Me.ToolStripSeparator13.Name = "ToolStripSeparator13"
+        Me.ToolStripSeparator13.Size = New System.Drawing.Size(214, 6)
+        '
+        'PlaneoToolStripMenuItem
+        '
+        Me.PlaneoToolStripMenuItem.Name = "PlaneoToolStripMenuItem"
+        Me.PlaneoToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.PlaneoToolStripMenuItem.Text = "Planeo"
         '
         'MetodosToolStripMenuItem
         '
@@ -266,13 +281,13 @@ Partial Class Mdi_menu
         'HoltropToolStripMenuItem
         '
         Me.HoltropToolStripMenuItem.Name = "HoltropToolStripMenuItem"
-        Me.HoltropToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HoltropToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.HoltropToolStripMenuItem.Text = "Holtrop"
         '
         'SavitskyToolStripMenuItem
         '
         Me.SavitskyToolStripMenuItem.Name = "SavitskyToolStripMenuItem"
-        Me.SavitskyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SavitskyToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SavitskyToolStripMenuItem.Text = "Savitsky"
         '
         'GraficosToolStripMenuItem
@@ -484,6 +499,11 @@ Partial Class Mdi_menu
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 25)
         '
+        'ToolStripSeparator12
+        '
+        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        '
         'ToolStripButton14
         '
         Me.ToolStripButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -503,10 +523,16 @@ Partial Class Mdi_menu
         Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton6.Text = "Imprimir Reporte"
         '
-        'ToolStripSeparator12
+        'FactorDeServicioToolStripMenuItem
         '
-        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        Me.FactorDeServicioToolStripMenuItem.Name = "FactorDeServicioToolStripMenuItem"
+        Me.FactorDeServicioToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.FactorDeServicioToolStripMenuItem.Text = "Factor de servicio"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(214, 6)
         '
         'Mdi_menu
         '
@@ -592,4 +618,8 @@ Partial Class Mdi_menu
     Friend WithEvents PruebasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator12 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator13 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents PlaneoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator14 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents FactorDeServicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

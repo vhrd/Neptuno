@@ -37,3 +37,44 @@ C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avanc
 C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form1.resources
 C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.form_nomografo.resources
 C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\obj\Debug\Neptuno.Form_imagen_bulbo.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\bin\Debug\Neptuno.exe.config
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.exe
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.xml
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.pdb
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\bin\Debug\Neptuno.exe.manifest
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\bin\Debug\Neptuno.application
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\bin\Debug\Neptuno.exe
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\bin\Debug\Neptuno.pdb
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\bin\Debug\Neptuno.xml
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.vbprojResolveAssemblyReference.cache
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.botones.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Datos_casco.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_apendices.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_apendices_porcentaje.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_datos_apendices.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_datos_fluido.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_datos_forma_casco.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_datos_propusion.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_datos_proyecto.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_datos_raire.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.form_datos_savitsky.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_imagen_bulbo.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_splash.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Mdi_menu.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_metodos.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Resources.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form1.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Forma_holtrop.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_grafico.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_reporte_holtrop_sin_base.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_solucion_Holtrop_mennem.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.form_nomografo.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_redojcic.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.vbproj.GenerateResource.Cache
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\RdlCompile.cache
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\RdlCompile.compiled
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.exe.manifest
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.application
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_factor_servicio.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_imagen_eslora_mojada.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_imagen_manga_pantoque.resources

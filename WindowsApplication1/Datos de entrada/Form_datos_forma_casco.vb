@@ -63,4 +63,9 @@
         ToolTip1.IsBalloon = True
         ToolTip1.ToolTipIcon = ToolTipIcon.Info
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Form_imagen_bulbo.MdiParent = Mdi_menu
+        Form_imagen_bulbo.Show()
+    End Sub
 End Class

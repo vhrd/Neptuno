@@ -96,7 +96,7 @@ Module Variables
     Public area_expandida As Decimal = 0.7393
     Public angulo_entrada As Decimal = 0
     Public cr As Decimal = 0
-    Public rair As Decimal = 0
+    Public raire As Decimal = 0
     Public w As Decimal = 0
     Public t As Decimal = 0
     Public area_frontal As Decimal = 0
@@ -120,11 +120,13 @@ Module Variables
 
 
     'variables planeo
-    Public Bpx As Decimal
+    Public Bpx As Decimal = 0
     Public iee As Decimal
     Public AT As Decimal
     Public Ax As Decimal
 
+    Public densidad_aire As Decimal = 1.2929999999999999
+    Public factor_servicio As Decimal
 
     'valores vectores 
     Public A1() As Decimal = {0, 0.064729999999999996, 0.10775999999999999, 0.094829999999999998, 0.034750000000000003, 0.030130000000000001, 0.031629999999999998, 0.031940000000000003, 0.043430000000000003, 0.050360000000000002, 0.056120000000000003, 0.059670000000000001}

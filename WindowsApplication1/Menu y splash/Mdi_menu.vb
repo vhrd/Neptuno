@@ -654,4 +654,14 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
     Private Sub SavitskyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SavitskyToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub PlaneoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlaneoToolStripMenuItem.Click
+        form_datos_savitsky.MdiParent = Me
+        form_datos_savitsky.Show()
+    End Sub
+
+    Private Sub FactorDeServicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FactorDeServicioToolStripMenuItem.Click
+        Form_factor_servicio.MdiParent = Me
+        Form_factor_servicio.Show()
+    End Sub
 End Class

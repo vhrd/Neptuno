@@ -21,7 +21,7 @@
             txt_viscosidad_cinematica.Text = Format(viscosidad_cinematica, "e5")
             GroupBox2.Enabled = True
         End If
-        
+        txt_densidad_aire.Text = densidad_aire
     End Sub
 
     Private Sub rb_agua_mar_CheckedChanged(sender As Object, e As EventArgs) Handles rb_agua_mar.CheckedChanged
@@ -67,6 +67,7 @@
                 tipo_fluido = "otro"
             End If
         End If
+        densidad_aire = txt_densidad_aire.Text
         Me.Close()
     End Sub
 End Class
