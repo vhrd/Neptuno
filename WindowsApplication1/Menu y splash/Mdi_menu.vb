@@ -615,9 +615,9 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
     End Sub
 
     Private Sub TodosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TodosToolStripMenuItem.Click
-        Form_redojcic.MdiParent = Me
-        Form_redojcic.WindowState = FormWindowState.Normal
-        Form_redojcic.Show()
+        Forma_savitsky.MdiParent = Me
+        Forma_savitsky.WindowState = FormWindowState.Normal
+        Forma_savitsky.Show()
         Forma_holtrop.MdiParent = Me
         Forma_holtrop.WindowState = FormWindowState.Normal
         Forma_holtrop.Show()
@@ -663,5 +663,11 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
     Private Sub FactorDeServicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FactorDeServicioToolStripMenuItem.Click
         Form_factor_servicio.MdiParent = Me
         Form_factor_servicio.Show()
+    End Sub
+
+    Private Sub SavitskyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SavitskyToolStripMenuItem1.Click
+        Forma_savitsky.MdiParent = Me
+        Forma_savitsky.WindowState = FormWindowState.Normal
+        Forma_savitsky.Show()
     End Sub
 End Class

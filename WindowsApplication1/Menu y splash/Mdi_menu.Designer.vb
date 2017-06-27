@@ -42,6 +42,8 @@ Partial Class Mdi_menu
         Me.ApendicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator13 = New System.Windows.Forms.ToolStripSeparator()
         Me.PlaneoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.FactorDeServicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MetodosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeleccionarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InfomaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -87,8 +89,6 @@ Partial Class Mdi_menu
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton14 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.FactorDeServicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.pbBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -209,6 +209,17 @@ Partial Class Mdi_menu
         Me.PlaneoToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.PlaneoToolStripMenuItem.Text = "Planeo"
         '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(214, 6)
+        '
+        'FactorDeServicioToolStripMenuItem
+        '
+        Me.FactorDeServicioToolStripMenuItem.Name = "FactorDeServicioToolStripMenuItem"
+        Me.FactorDeServicioToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.FactorDeServicioToolStripMenuItem.Text = "Factor de servicio"
+        '
         'MetodosToolStripMenuItem
         '
         Me.MetodosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SeleccionarToolStripMenuItem, Me.InfomaciónToolStripMenuItem})
@@ -251,24 +262,24 @@ Partial Class Mdi_menu
         'HoltropToolStripMenuItem1
         '
         Me.HoltropToolStripMenuItem1.Name = "HoltropToolStripMenuItem1"
-        Me.HoltropToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
+        Me.HoltropToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.HoltropToolStripMenuItem1.Text = "Holtrop"
         '
         'SavitskyToolStripMenuItem1
         '
         Me.SavitskyToolStripMenuItem1.Name = "SavitskyToolStripMenuItem1"
-        Me.SavitskyToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
+        Me.SavitskyToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.SavitskyToolStripMenuItem1.Text = "Savitsky"
         '
         'ToolStripSeparator11
         '
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(113, 6)
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(149, 6)
         '
         'TodosToolStripMenuItem
         '
         Me.TodosToolStripMenuItem.Name = "TodosToolStripMenuItem"
-        Me.TodosToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.TodosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TodosToolStripMenuItem.Text = "Todos"
         '
         'REPORTESToolStripMenuItem
@@ -522,17 +533,6 @@ Partial Class Mdi_menu
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton6.Text = "Imprimir Reporte"
-        '
-        'FactorDeServicioToolStripMenuItem
-        '
-        Me.FactorDeServicioToolStripMenuItem.Name = "FactorDeServicioToolStripMenuItem"
-        Me.FactorDeServicioToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.FactorDeServicioToolStripMenuItem.Text = "Factor de servicio"
-        '
-        'ToolStripSeparator14
-        '
-        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(214, 6)
         '
         'Mdi_menu
         '
