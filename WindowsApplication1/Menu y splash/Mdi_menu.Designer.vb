@@ -54,10 +54,12 @@ Partial Class Mdi_menu
         Me.SavitskyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.TodosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GraficosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HoltropToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SavitskyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GraficosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TodosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CascadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarTodoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -85,9 +87,9 @@ Partial Class Mdi_menu
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton14 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.pbBackground, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,11 +98,11 @@ Partial Class Mdi_menu
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.DATOSENTRADAToolStripMenuItem, Me.MetodosToolStripMenuItem, Me.SOLUCIÓNToolStripMenuItem, Me.TablasToolStripMenuItem, Me.REPORTESToolStripMenuItem, Me.GraficosToolStripMenuItem, Me.VentanasToolStripMenuItem, Me.PruebasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.DATOSENTRADAToolStripMenuItem, Me.MetodosToolStripMenuItem, Me.SOLUCIÓNToolStripMenuItem, Me.TablasToolStripMenuItem, Me.GraficosToolStripMenuItem, Me.REPORTESToolStripMenuItem, Me.VentanasToolStripMenuItem, Me.PruebasToolStripMenuItem})
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(839, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1616, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -256,35 +258,41 @@ Partial Class Mdi_menu
         '
         Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HoltropToolStripMenuItem1, Me.SavitskyToolStripMenuItem1, Me.ToolStripSeparator11, Me.TodosToolStripMenuItem})
         Me.TablasToolStripMenuItem.Name = "TablasToolStripMenuItem"
-        Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.TablasToolStripMenuItem.Text = "Tablas"
+        Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.TablasToolStripMenuItem.Text = "Resultados"
         '
         'HoltropToolStripMenuItem1
         '
         Me.HoltropToolStripMenuItem1.Name = "HoltropToolStripMenuItem1"
-        Me.HoltropToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.HoltropToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.HoltropToolStripMenuItem1.Text = "Holtrop"
         '
         'SavitskyToolStripMenuItem1
         '
         Me.SavitskyToolStripMenuItem1.Name = "SavitskyToolStripMenuItem1"
-        Me.SavitskyToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SavitskyToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.SavitskyToolStripMenuItem1.Text = "Savitsky"
         '
         'ToolStripSeparator11
         '
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(113, 6)
         '
         'TodosToolStripMenuItem
         '
         Me.TodosToolStripMenuItem.Name = "TodosToolStripMenuItem"
-        Me.TodosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TodosToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.TodosToolStripMenuItem.Text = "Todos"
+        '
+        'GraficosToolStripMenuItem
+        '
+        Me.GraficosToolStripMenuItem.Name = "GraficosToolStripMenuItem"
+        Me.GraficosToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.GraficosToolStripMenuItem.Text = "Graficos"
         '
         'REPORTESToolStripMenuItem
         '
-        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HoltropToolStripMenuItem, Me.SavitskyToolStripMenuItem})
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HoltropToolStripMenuItem, Me.SavitskyToolStripMenuItem, Me.ToolStripSeparator15, Me.TodosToolStripMenuItem1})
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
         Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.REPORTESToolStripMenuItem.Text = "Reportes"
@@ -292,20 +300,25 @@ Partial Class Mdi_menu
         'HoltropToolStripMenuItem
         '
         Me.HoltropToolStripMenuItem.Name = "HoltropToolStripMenuItem"
-        Me.HoltropToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.HoltropToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HoltropToolStripMenuItem.Text = "Holtrop"
         '
         'SavitskyToolStripMenuItem
         '
         Me.SavitskyToolStripMenuItem.Name = "SavitskyToolStripMenuItem"
-        Me.SavitskyToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SavitskyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SavitskyToolStripMenuItem.Text = "Savitsky"
         '
-        'GraficosToolStripMenuItem
+        'ToolStripSeparator15
         '
-        Me.GraficosToolStripMenuItem.Name = "GraficosToolStripMenuItem"
-        Me.GraficosToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.GraficosToolStripMenuItem.Text = "Graficos"
+        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
+        Me.ToolStripSeparator15.Size = New System.Drawing.Size(149, 6)
+        '
+        'TodosToolStripMenuItem1
+        '
+        Me.TodosToolStripMenuItem1.Name = "TodosToolStripMenuItem1"
+        Me.TodosToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.TodosToolStripMenuItem1.Text = "Todos"
         '
         'VentanasToolStripMenuItem
         '
@@ -357,10 +370,11 @@ Partial Class Mdi_menu
         '
         'pbBackground
         '
+        Me.pbBackground.BackColor = System.Drawing.Color.White
         Me.pbBackground.Image = CType(resources.GetObject("pbBackground.Image"), System.Drawing.Image)
-        Me.pbBackground.Location = New System.Drawing.Point(214, 74)
+        Me.pbBackground.Location = New System.Drawing.Point(33, 74)
         Me.pbBackground.Name = "pbBackground"
-        Me.pbBackground.Size = New System.Drawing.Size(355, 65)
+        Me.pbBackground.Size = New System.Drawing.Size(172, 93)
         Me.pbBackground.TabIndex = 6
         Me.pbBackground.TabStop = False
         '
@@ -370,10 +384,10 @@ Partial Class Mdi_menu
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1, Me.ToolStripSeparator7, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10, Me.ToolStripButton11, Me.ToolStripButton12, Me.ToolStripSeparator8, Me.ToolStripButton13, Me.ToolStripSeparator9, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator10, Me.ToolStripSeparator12, Me.ToolStripButton14, Me.ToolStripButton6})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1, Me.ToolStripSeparator7, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10, Me.ToolStripButton11, Me.ToolStripButton12, Me.ToolStripSeparator8, Me.ToolStripButton13, Me.ToolStripSeparator9, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator12, Me.ToolStripButton14, Me.ToolStripSeparator10, Me.ToolStripButton6})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(839, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1616, 25)
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -505,11 +519,6 @@ Partial Class Mdi_menu
         Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton5.Text = "Resultados"
         '
-        'ToolStripSeparator10
-        '
-        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 25)
-        '
         'ToolStripSeparator12
         '
         Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
@@ -525,6 +534,11 @@ Partial Class Mdi_menu
         Me.ToolStripButton14.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton14.Text = "Métodos"
         '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 25)
+        '
         'ToolStripButton6
         '
         Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -538,7 +552,7 @@ Partial Class Mdi_menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(839, 468)
+        Me.ClientSize = New System.Drawing.Size(1616, 741)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.pbBackground)
         Me.Controls.Add(Me.MenuStrip1)
@@ -604,7 +618,6 @@ Partial Class Mdi_menu
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton13 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator9 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton14 As System.Windows.Forms.ToolStripButton
     Friend WithEvents MetodosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SavitskyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -622,4 +635,7 @@ Partial Class Mdi_menu
     Friend WithEvents PlaneoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator14 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents FactorDeServicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator15 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents TodosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

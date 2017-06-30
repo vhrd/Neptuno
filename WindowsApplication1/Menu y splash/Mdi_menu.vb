@@ -11,14 +11,19 @@ Imports Microsoft.Reporting.WinForms
 Public Class Mdi_menu
     Public fuente As New ReportDataSource
     Public fuente1 As New ReportDataSource
-    Public fuente_radojcic As New ReportDataSource
+    Public fuente2 As New ReportDataSource
     Private Sub CASCOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CASCOToolStripMenuItem.Click
-        Datos_casco.MdiParent = Me
-        Datos_casco.Show()
+        If metodo_holtrop = False And metodo_savitsky = False Then
+            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
+        Else
+            Datos_casco.MdiParent = Me
+            Datos_casco.Show()
+        End If
+     
     End Sub
     Private Sub myMdiControlPaint(ByVal sender As Object, _
 ByVal e As System.Windows.Forms.PaintEventArgs)
-        e.Graphics.DrawImage(Me.pbBackground.Image, 300, 100, Me.Width - 600, Me.Height - 250)
+        e.Graphics.DrawImage(Me.pbBackground.Image, 0, 0, Me.Width, Me.Height)
     End Sub
 
     Private Sub myMdiControlResize(ByVal sender As Object, _
@@ -27,6 +32,7 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
     End Sub
 
     Private Sub Menu_principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         dtholtrop = New DataTable
         With dtholtrop
             .Columns.Add("vb")
@@ -48,27 +54,14 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
             .Columns.Add("vb_kn")
             .Columns.Add("vb_ms")
             .Columns.Add("fn")
-            .Columns.Add("rf")
+            .Columns.Add("fnvol")
             .Columns.Add("rapp")
             .Columns.Add("raire")
             .Columns.Add("rtotal")
-            .Columns.Add("rtr")
             .Columns.Add("ehp")
-            .Columns.Add("fnvol")
+
         End With
 
-
-
-        dtradojcic = New DataTable
-        With dtradojcic
-            .Columns.Add("vb_kn")
-            .Columns.Add("vb_ms")
-            .Columns.Add("fn")
-            .Columns.Add("rnh")
-            .Columns.Add("rapp")
-            .Columns.Add("rtotal")
-            .Columns.Add("ehp")
-        End With
 
         dt_datos = New DataTable
         With dt_datos
@@ -143,13 +136,23 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
 
 
     Private Sub PropulsiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PropulsiónToolStripMenuItem.Click
-        Form_datos_propusion.MdiParent = Me
-        Form_datos_propusion.Show()
+        If metodo_holtrop = False And metodo_savitsky = False Then
+            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
+        Else
+            Form_datos_propusion.MdiParent = Me
+            Form_datos_propusion.Show()
+        End If
+        
     End Sub
 
     Private Sub FormaDelCascoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormaDelCascoToolStripMenuItem.Click
-        Form_datos_forma_casco.MdiParent = Me
-        Form_datos_forma_casco.Show()
+        If metodo_holtrop = False And metodo_savitsky = False Then
+            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
+        Else
+            Form_datos_forma_casco.MdiParent = Me
+            Form_datos_forma_casco.Show()
+        End If
+       
     End Sub
 
     Private Sub PropiedadesDelFluidoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PropiedadesDelFluidoToolStripMenuItem.Click
@@ -164,8 +167,13 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
 
 
     Private Sub ApendicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApendicesToolStripMenuItem.Click
-        Form_apendices.MdiParent = Me
-        Form_apendices.Show()
+        If metodo_holtrop = False And metodo_savitsky = False Then
+            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
+        Else
+            Form_apendices.MdiParent = Me
+            Form_apendices.Show()
+        End If
+        
     End Sub
 
     Private Sub REPORTESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTESToolStripMenuItem.Click
@@ -177,7 +185,7 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
         Form_reporte_holtrop_sin_base.ReportViewer1.LocalReport.DataSources.Clear()
         Form_reporte_holtrop_sin_base.ReportViewer1.LocalReport.DataSources.Add(fuente)
         Form_reporte_holtrop_sin_base.ReportViewer1.LocalReport.DataSources.Add(fuente1)
-        Form_reporte_holtrop_sin_base.ReportViewer1.LocalReport.DataSources.Add(fuente_radojcic)
+        Form_reporte_holtrop_sin_base.ReportViewer1.LocalReport.DataSources.Add(fuente2)
         Form_reporte_holtrop_sin_base.ReportViewer1.LocalReport.ReportEmbeddedResource = "Neptuno.Reporte_holtrop_sin_base.rdlc"
         Form_reporte_holtrop_sin_base.Show()
     End Sub
@@ -206,26 +214,7 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
 
     End Sub
 
-    Sub almacenar_radojcic()
-        Dim ds As New DataSet_RT
-        Dim dtw As DataRow
-        For i As Integer = 0 To dtradojcic.Rows.Count - 1
-            dtw = ds.tabla_radojcic.NewRow
-            dtw("vb_kn") = dtradojcic.Rows(i).Item("vb_kn")
-            dtw("vb_ms") = dtradojcic.Rows(i).Item("vb_ms")
-            dtw("fn") = dtradojcic.Rows(i).Item("fn")
-            dtw("rnh") = dtradojcic.Rows(i).Item("rnh")
-            dtw("rapp") = dtradojcic.Rows(i).Item("rapp")
-            dtw("rtotal") = dtradojcic.Rows(i).Item("rtotal")
-            dtw("ehp") = dtradojcic.Rows(i).Item("ehp")
-
-            ds.tabla_radojcic.Rows.Add(dtw)
-
-        Next
-        fuente_radojcic.Name = "resultados_radojcic"
-        fuente_radojcic.Value = ds.Tables(2)
-
-    End Sub
+   
 
     Private Sub DatosDelProyectoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DatosDelProyectoToolStripMenuItem.Click
         Form_datos_proyecto.ShowDialog()
@@ -418,10 +407,11 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
 
     Private Sub HoltropToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HoltropToolStripMenuItem.Click
         If dtholtrop.Rows.Count = 0 Then
-            MsgBox("No existen calculos para el metodo de Holtrop.", MsgBoxStyle.Information, "INFORMACION")
+            MsgBox("No existen calculos para el metodo de Holtrop.", MsgBoxStyle.Exclamation, "INFORMACION")
         Else
 
             almacenar_holtrop() 'calculos
+            almacenar_savitsky()
             llenar_datos()
             llamar_reporte()
 
@@ -562,12 +552,15 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
     End Sub
 
     Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click
-        Form_redojcic.MdiParent = Me
-        Form_redojcic.WindowState = FormWindowState.Normal
-        Form_redojcic.Show()
+
+
         Forma_holtrop.MdiParent = Me
         Forma_holtrop.WindowState = FormWindowState.Normal
         Forma_holtrop.Show()
+
+        Forma_savitsky.MdiParent = Me
+        Forma_savitsky.WindowState = FormWindowState.Normal
+        Forma_savitsky.Show()
     End Sub
 
     Private Sub MetodosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MetodosToolStripMenuItem.Click
@@ -595,24 +588,9 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
         Forma_holtrop.Show()
     End Sub
 
-    Private Sub RadojcicToolStripMenuItem1_Click(sender As Object, e As EventArgs)
-        Form_redojcic.MdiParent = Me
-        Form_redojcic.WindowState = FormWindowState.Normal
-        Form_redojcic.Show()
-    End Sub
+  
 
-    Private Sub RadojcicToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        If dtradojcic.Rows.Count = 0 Then
-            MsgBox("No existen calculos para el metodo de Radojcic.", MsgBoxStyle.Information, "INFORMACION")
-        Else
 
-            almacenar_holtrop() 'calculos
-            almacenar_radojcic()
-            llenar_datos()
-            llamar_reporte()
-
-        End If
-    End Sub
 
     Private Sub TodosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TodosToolStripMenuItem.Click
         Forma_savitsky.MdiParent = Me
@@ -634,30 +612,67 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
     End Sub
 
     Private Sub ToolStripButton6_Click(sender As Object, e As EventArgs) Handles ToolStripButton6.Click
-        If dtholtrop.Rows.Count = 0 And dtsavitsky.Rows.Count = 0 Then
-            MsgBox("No existen datos para imprimir.", MsgBoxStyle.Information, "INFORMACIÓN")
+        If dtsavitsky.Rows.Count = 0 And dtholtrop.Rows.Count = 0 Then
+            MsgBox("No existen cálculos para ningún método.", MsgBoxStyle.Exclamation, "INFORMACIÓN")
         Else
             If metodo_holtrop = True Then
                 almacenar_holtrop() 'calculos
-                almacenar_radojcic()
                 llenar_datos()
-                llamar_reporte()
+
             End If
             If metodo_savitsky = True Then
+                almacenar_savitsky()
+                llenar_datos()
 
             End If
-            Form_reporte_holtrop_sin_base.Show()
-        End If
+            If metodo_holtrop = True Or metodo_savitsky = True Then
+                llamar_reporte()
+            End If
 
+        End If
     End Sub
+
+
 
     Private Sub SavitskyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SavitskyToolStripMenuItem.Click
+        If dtsavitsky.Rows.Count = 0 Then
+            MsgBox("No existen cálculos para el metodo de Savitsky.", MsgBoxStyle.Exclamation, "INFORMACIÓN")
+        Else
+            almacenar_holtrop()
+            almacenar_savitsky()
+            llenar_datos()
+            llamar_reporte()
 
+        End If
     End Sub
+    Sub almacenar_savitsky()
+        Dim ds As New DataSet_RT
+        Dim dtw As DataRow
+        For i As Integer = 0 To dtsavitsky.Rows.Count - 1
+            dtw = ds.tabla_savitsky.NewRow
+            dtw("vb_kn") = dtsavitsky.Rows(i).Item("vb_kn")
+            dtw("vb_ms") = dtsavitsky.Rows(i).Item("vb_ms")
+            dtw("fn") = dtsavitsky.Rows(i).Item("fn")
+            dtw("fnvol") = dtsavitsky.Rows(i).Item("fnvol")
+            dtw("rapp") = dtsavitsky.Rows(i).Item("rapp")
+            dtw("raire") = dtsavitsky.Rows(i).Item("raire")
+            dtw("rtotal") = dtsavitsky.Rows(i).Item("rtotal")
+            dtw("ehp") = dtsavitsky.Rows(i).Item("ehp")
 
+            ds.tabla_savitsky.Rows.Add(dtw)
+
+        Next
+        fuente2.Name = "resultados_savitsky"
+        fuente2.Value = ds.Tables(2)
+    End Sub
     Private Sub PlaneoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlaneoToolStripMenuItem.Click
-        form_datos_savitsky.MdiParent = Me
-        form_datos_savitsky.Show()
+        If metodo_holtrop = False And metodo_savitsky = False Then
+            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
+        Else
+            form_datos_savitsky.MdiParent = Me
+            form_datos_savitsky.Show()
+        End If
+
     End Sub
 
     Private Sub FactorDeServicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FactorDeServicioToolStripMenuItem.Click
@@ -669,5 +684,27 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
         Forma_savitsky.MdiParent = Me
         Forma_savitsky.WindowState = FormWindowState.Normal
         Forma_savitsky.Show()
+    End Sub
+
+
+    Private Sub TodosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TodosToolStripMenuItem1.Click
+        If dtsavitsky.Rows.Count = 0 And dtholtrop.Rows.Count = 0 Then
+            MsgBox("No existen cálculos para ningún método.", MsgBoxStyle.Exclamation, "INFORMACIÓN")
+        Else
+            If metodo_holtrop = True Then
+                almacenar_holtrop() 'calculos
+                llenar_datos()
+
+            End If
+            If metodo_savitsky = True Then
+                almacenar_savitsky()
+                llenar_datos()
+
+            End If
+            If metodo_holtrop = True Or metodo_savitsky = True Then
+                llamar_reporte()
+            End If
+
+        End If
     End Sub
 End Class
