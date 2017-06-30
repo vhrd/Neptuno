@@ -5,9 +5,6 @@ Public Class Form_reporte_holtrop_sin_base
         parametro = New ReportParameter("holtrop", metodo_holtrop)
         Me.ReportViewer1.LocalReport.SetParameters(parametro)
 
-        parametro = New ReportParameter("radojcic", metodo_radojcic)
-        Me.ReportViewer1.LocalReport.SetParameters(parametro)
-
         parametro = New ReportParameter("savitsky", metodo_savitsky)
         Me.ReportViewer1.LocalReport.SetParameters(parametro)
 

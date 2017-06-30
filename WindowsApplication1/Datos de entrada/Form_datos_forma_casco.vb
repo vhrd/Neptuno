@@ -3,6 +3,12 @@
 
 
     Private Sub Form_datos_forma_casco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If metodo_holtrop = False And metodo_savitsky = True Then
+            GroupBox1.Enabled = False
+            GroupBox2.Enabled = False
+        End If
+
+
         txt_area_transv_bulbo.Text = areaT_bulbo
         txt_centro_area_bulbo.Text = centroV_area_bulbo
         txt_area_transom.Text = area_transom
@@ -42,6 +48,7 @@
         centroV_area_bulbo = txt_centro_area_bulbo.Text
         area_transom = txt_area_transom.Text
         area_amidship = txt_rea_seccion_media.Text
+
         Me.Close()
     End Sub
 

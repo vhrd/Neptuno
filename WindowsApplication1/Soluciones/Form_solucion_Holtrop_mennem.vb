@@ -62,93 +62,85 @@ Public Class Form_solucion_Holtrop_mennem
     Dim vb As Decimal
     Public dtw As DataRow
     Dim ds As New DataSet_RT
+    Dim ok As Integer = 0
     Private Sub btn_ejecutar_Click(sender As Object, e As EventArgs) Handles btn_ejecutar.Click
         If metodo_holtrop = False And metodo_radojcic = False And metodo_savitsky = False Then
             MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Information, "INFORMACION IMPORTANTE")
         Else
-            '  Try
-            Dim LB As Decimal = eslora_wl / manga_wl
-            Dim BT As Decimal = manga_wl / calado_medio
 
-            'definir velocidades
-            a = txt_velocidad_inicial.Text
-            b = txt_velocidad_final.Text
-            paso = 1
-            ' limpiar tablas
-            dt_datos.Clear()
-            holtrop_constantes()
-            dtholtrop.Clear()
-            dtradojcic.Clear()
-            'llenar datos principales de embarcacion
-            llenar_datos_embarcacion()
-            'calcular holtrop
-            If metodo_holtrop = True Then
-                For Me.vb = a To b Step paso
-                    calculo_holtrop()
-                Next
-            End If
-            'calcular radojcic
-            If metodo_radojcic = True Then
-                vb_ms = vb * 0.51444444444000004
-                Fn_vol = vb_ms / Sqrt(aceleracion * Vs ^ (1 / 3))
-                If Fn_vol >= 0.59999999999999998 And Fn_vol <= 3.5 Then
+            Try
+                'definir velocidades
+                a = txt_velocidad_inicial.Text
+                b = txt_velocidad_final.Text
+                paso = 1
+                ' limpiar tablas
+                dt_datos.Clear()
+
+                dtholtrop.Clear()
+                'llenar datos principales de embarcacion
+                llenar_datos_embarcacion()
+                'calcular holtrop
+                If metodo_holtrop = True Then
+                    holtrop_constantes()
                     For Me.vb = a To b Step paso
-                        calculo_radojcic()
+                        calculo_holtrop()
                     Next
-                Else
-                    Dim mensaje As String = MsgBox("El método de Radojcic es valido para:" & vbCrLf & "       0.6<Fnvol<3.5" & vbCrLf & "El Fnvol obtenido es igual a " & Round(Fn_vol, 1) & "" & vbCrLf & "" & vbCrLf & " ¿Desea calcular Resistencia para el método de Radojcic? ", MsgBoxStyle.YesNo, "INFORMACIÓN.")
-                    If mensaje = MsgBoxResult.Yes Then
-                        For Me.vb = a To b Step paso
-                            calculo_radojcic()
-                        Next
-                    Else
-                    End If
+                End If
+            Catch ex As Exception
+
+            End Try
+            
+            Try
+                'calcular savitsky
+                If metodo_savitsky = True Then
+
+                    calculo_savitsky()
+
+                End If
+            Catch ex As Exception
+
+            End Try
+
+
+            
+
+
+
+            If ok > 0 Then
+                MsgBox("Cálculos realizados correctamente.", MsgBoxStyle.OkOnly, "INFORMACION")
+                Me.Close()
+                Form_grafico.MdiParent = Mdi_menu
+                Form_grafico.Location = New Point(665, 0)
+                Form_grafico.WindowState = FormWindowState.Normal
+                Form_grafico.Show()
+                If metodo_savitsky = True And metodo_holtrop = False Then
+                    Form_grafico.ComboBox1.SelectedIndex = 1
+                    Form_grafico.llenar_grafico_savitsky()
+
+                    Forma_savitsky.MdiParent = Mdi_menu
+                    Forma_savitsky.WindowState = FormWindowState.Normal
+                    Forma_savitsky.Show()
+                End If
+                If metodo_holtrop = True And metodo_savitsky = False Then
+
+                    Form_grafico.llenar_grafico_holtrop()
+                    Form_grafico.ComboBox1.SelectedIndex = 0
+                    Forma_holtrop.MdiParent = Mdi_menu
+                    Forma_holtrop.WindowState = FormWindowState.Normal
+                    Forma_holtrop.Show()
+
                 End If
 
-
+                If metodo_holtrop = True And metodo_savitsky = True Then
+                    Form_grafico.llenar_grafico_holtrop()
+                    Form_grafico.ComboBox1.SelectedIndex = 0
+                    Forma_holtrop.MdiParent = Mdi_menu
+                    Forma_holtrop.WindowState = FormWindowState.Normal
+                    Forma_holtrop.Show()
+                End If
             End If
 
-            'calcular savitsky
-            If metodo_savitsky = True Then
-                vb_ms = vb * 0.51444444444000004
-
-
-
-
-                For Me.vb = a To b Step paso
-                    calculo_savitsky()
-                Next
-
-            End If
-            MsgBox("Cálculos realizados correctamente.", MsgBoxStyle.OkOnly, "INFORMACION")
-            Me.Close()
-            Form_grafico.MdiParent = Mdi_menu
-            Form_grafico.Location = New Point(665, 0)
-            Form_grafico.WindowState = FormWindowState.Normal
-            Form_grafico.Show()
-            If metodo_savitsky = True Then
-                Form_grafico.llenar_grafico_savitsky()
-            End If
-            If metodo_holtrop = True Then
-                Form_grafico.llenar_grafico_holtrop()
-                Form_grafico.ComboBox1.SelectedIndex = 0
-            End If
-
-            If metodo_holtrop = True Then
-                Forma_holtrop.MdiParent = Mdi_menu
-                Forma_holtrop.WindowState = FormWindowState.Normal
-                Forma_holtrop.Show()
-
-            End If
-            If metodo_savitsky = True Then
-                Forma_savitsky.MdiParent = Mdi_menu
-                Forma_savitsky.WindowState = FormWindowState.Normal
-                Forma_savitsky.Show()
-            End If
-
-            '  Catch ex As Exception
-            '   MsgBox(ex.Message)
-            '   End Try
+            
         End If
     End Sub
     Sub llenar_datos_embarcacion()
@@ -179,10 +171,16 @@ Public Class Form_solucion_Holtrop_mennem
         dt_datos.Rows.Add(row_datos)
     End Sub
     Sub holtrop_constantes()
-        Area_mojada = eslora_wl * (2 * calado_medio + manga_wl) * (Sqrt(Cmaestra)) * (0.453 + 0.4425 * Cblock - 0.2862 * Cmaestra - 0.003467 * (manga_wl / calado_medio) + 0.3696 * Cwaterplane) + 2.38 * (areaT_bulbo / Cblock)
+        Try
+            Area_mojada = eslora_wl * (2 * calado_medio + manga_wl) * (Sqrt(Cmaestra)) * (0.45300000000000001 + 0.4425 * Cblock - 0.28620000000000001 * Cmaestra - 0.003467 * (manga_wl / calado_medio) + 0.36959999999999998 * Cwaterplane) + 2.3799999999999999 * (areaT_bulbo / Cblock)
+        Catch ex As Exception
+
+        End Try
 
     End Sub
     Sub calculo_holtrop()
+
+        Dim BT As Decimal = manga_wl / calado_medio
         Dim L As Decimal = eslora_wl
         Dim B As Decimal = manga_wl
         Dim BL As Decimal = B / L
@@ -200,7 +198,10 @@ Public Class Form_solucion_Holtrop_mennem
             Case Is > 0.050000000000000003
                 C12 = TL ^ 0.2228446
             Case Is < 0.050000000000000003
+
                 C12 = 48.200000000000003 * (TL - 0.02) ^ (2.0779999999999998) + 0.47994799999999999
+
+              
             Case Is < 0.02
                 C12 = 0.47994799999999999
         End Select
@@ -214,16 +215,7 @@ Public Class Form_solucion_Holtrop_mennem
         Fn = vb_ms / Sqrt(aceleracion * eslora_wl)
         Rf = (Cf) * 0.5 * densidad * Area_mojada * (vb_ms ^ 2) / 1000 'diferencia de 3KN
 
-        'CALCULO RAPP
-        If calculo_raap = 0 Then
-            Sapp = (I + II + III + IV + V + VI + VII + VIII + +IX + X)
-            k2eq = (I * I_ + II * II_ + III * III_ + IV * IV_ + V * V_ + VI * VI_ + VII * VII_ * VIII * VIII_ + IX * IX_ + X * X_) / (Sapp)
-
-            Dim rapp_thruster As Decimal = (densidad / aceleracion) * (vb_ms ^ 2) * coef_thruster * PI * diametro_thruster ^ 2
-            Rapp = 0.5 * (densidad / aceleracion) * (vb_ms ^ 2) * Sapp * (k2eq) * Cf
-        Else
-            Rapp = (Rapp_porcentaje / 100) * ((Rf * factor_formas) + Rapp + Rw + Rtr + Rb + Ra)
-        End If
+        
 
         'CALCULO RW
         C3 = 0.56000000000000005 * ((areaT_bulbo ^ 1.5) / ((manga_wl * calado_medio) * (0.31 * Sqrt(areaT_bulbo) + calado_proa - centroV_area_bulbo)))
@@ -260,9 +252,12 @@ Public Class Form_solucion_Holtrop_mennem
                 lamda = 1.446 * Cprismatico - 0.35999999999999999
         End Select
 
-        C5 = 1 - 0.80000000000000004 * area_transom / (B * calado_medio * Cmaestra)
 
+
+        C5 = 1 - 0.80000000000000004 * area_transom / (B * calado_medio * Cmaestra)
         C2 = Exp(-1.8899999999999999 * Sqrt(C3))
+     
+
 
         Select Case BL
             Case Is < 0.11
@@ -312,6 +307,18 @@ Public Class Form_solucion_Holtrop_mennem
 
         Rt = Rf * (factor_formas) + Rapp + Rw + Rb + Rtr + Ra
 
+        'CALCULO RAPP
+        If areas_apendinces = True Then
+
+            Sapp = (I + II + III + IV + V + VI + VII + VIII + +IX + X)
+            k2eq = (I * I_ + II * II_ + III * III_ + IV * IV_ + V * V_ + VI * VI_ + VII * VII_ * VIII * VIII_ + IX * IX_ + X * X_) / (Sapp)
+
+            Dim rapp_thruster As Decimal = (densidad / aceleracion) * (vb_ms ^ 2) * coef_thruster * PI * diametro_thruster ^ 2
+            Rapp = 0.5 * (densidad / aceleracion) * (vb_ms ^ 2) * Sapp * (k2eq) * Cf
+        Else
+            Rapp = (Rapp_porcentaje / 100) * Rt
+        End If
+
         row_holtrop = dtholtrop.NewRow
         row_holtrop("vb") = Round(vb, 2)
         row_holtrop("vb_ms") = Round(vb_ms, 2)
@@ -326,7 +333,7 @@ Public Class Form_solucion_Holtrop_mennem
         row_holtrop("ehp") = Round(Rt * vb_ms, 2)
 
         dtholtrop.Rows.Add(row_holtrop)
-
+        ok = ok + 1
 
     End Sub
   
@@ -361,50 +368,93 @@ Public Class Form_solucion_Holtrop_mennem
     End Sub
     Sub calculo_savitsky()
         'calculo preplaneo
-        Dim Tmfeet As Decimal = calado_medio * 3.28084
-        Dim Lfeet As Decimal = eslora_wl * 3.28084
-        Dim Bpxfeet As Decimal = Bpx * 3.28084
-        Dim Vsfeet As Decimal = Vs * 35.314700000000002
-        Dim Atfeet As Decimal = area_transom * 10.7639
-        Dim Axfeet As Decimal = area_amidship * 10.7639
-        Dim Bx_feet As Decimal = manga_wl * 3.28084
-        Dim wetted_area As Decimal = (Vsfeet ^ (2 / 3)) * 2.262 * Sqrt(Lfeet / (Vsfeet ^ (2 / 3))) * (1 + 0.045999999999999999 * (Bx_feet / Tmfeet) + 0.0028700000000000002 * (Bx_feet / Tmfeet) ^ 2)
-        Dim Cf_100 As Decimal
-        Dim Rn_100 As Decimal
-        Dim desplazamiento_lbs As Decimal = desplazamiento_feet * 2.2046199999999998
-        Dim Rt_100 As Decimal
+        Dim arraylist_param As New ArrayList
+        Dim variable As String = ""
+        If eslora_wl = 0 Then
+            arraylist_param.Add("Eslora")
+        End If
+        If manga_wl = 0 Then
+            arraylist_param.Add("Manga")
+        End If
 
-        Dim X, Z, U, W As Decimal
-        X = (Vsfeet ^ (1 / 3)) / Lfeet
-        Z = Vsfeet / (Bpxfeet ^ 3)
-        U = Sqrt(2 * iee)
-        W = Atfeet / Axfeet
+        If Vs = 0 Then
+            arraylist_param.Add("Coeficiente de block")
+        End If
+        If area_transom = 0 Then
+            arraylist_param.Add("Area sumergida espejo")
+        End If
+        If area_amidship = 0 Then
+            arraylist_param.Add("Area sección media")
+        End If
+
+        If arraylist_param.Count > 0 Then
+            Dim n As Integer
+            For n = 0 To arraylist_param.Count - 1
+                variable = variable + "," + arraylist_param.Item(n).ToString
+            Next
+
+            MsgBox("Falta ingresar las siguiente medidas para el método de Savitsky:" & variable & " ", MsgBoxStyle.Critical, "INFORMACION IMPORTANTE")
+        Else
+            Dim Tmfeet As Decimal = calado_medio * 3.28084
+            Dim Lfeet As Decimal = eslora_wl * 3.28084
+            Dim Bpxfeet As Decimal = Bpx * 3.28084
+            Dim Vsfeet As Decimal = Vs * 35.314700000000002
+            Dim Lvs13 As Decimal = Lfeet / (Vsfeet ^ (1 / 3))
+            Dim Atfeet As Decimal = area_transom * 10.7639
+            Dim Axfeet As Decimal = area_amidship * 10.7639
+            Dim Bx_feet As Decimal = manga_wl * 3.28084
+            Dim wetted_area As Decimal = 2.262 * Sqrt(Lvs13) * (1 + 0.045999999999999999 * (Bx_feet / Tmfeet) + 0.0028700000000000002 * (Bx_feet / Tmfeet) ^ 2)
+            Dim Cf_100 As Decimal
+            Dim Rn_100 As Decimal
+            Dim desplazamiento_lbs As Decimal = Vs * densidad * 2.2046199999999998
+            Dim Rt_100 As Decimal
+            Dim X, Z, U, W As Decimal
+            X = (Vsfeet ^ (1 / 3)) / Lfeet
+            Z = Vsfeet / (Bpxfeet ^ 3)
+            U = Sqrt(2 * iee)
+            W = Atfeet / Axfeet
+
+            Dim i As Decimal
+            Dim n As Integer = 0
+            Ca = 0
+            dtsavitsky.Clear()
+
+            For i = 1.0 To 2.0 Step 0.10000000000000001
+                vb_ms = i * Sqrt(aceleracion * Vs ^ (1 / 3))
+                vb = vb_ms / 0.51439999999999997
+                n = n + 1
+
+                Rt_100 = (A1(n) * 1 + A2(n) * X + A4(n) * U + A5(n) * W + A6(n) * X * Z + A7(n) * X * U + A8(n) * X * W + A9(n) * Z * U + A10(n) * Z * W + A15(n) * (W ^ 2) + A18(n) * X * (W ^ 2) + A19(n) * Z * (X ^ 2) + A24(n) * U * (W ^ 2) + A27(n) * W * (U ^ 2))
+
+                Rn_100 = 17500544 * i * Lvs13
+                Cf_100 = 0.074999999999999997 / ((Log10(Rn_100) - 2) ^ 2)
 
 
-        Dim i As Decimal
-        Dim n As Integer = 0
-        Ca = 0
-        For i = 1.0 To 2.0 Step 0.10000000000000001
-            vb_ms = Sqrt((i ^ 2) * aceleracion * Vs ^ (1 / 3))
-            n = n + 1
-            Rt_100 = (A1(n) * 1 + A2(n) * X + A4(n) * U + A5(n) * W + A6(n) * X * Z + A7(n) * X * U + A8(n) * X * W + A9(n) * Z * U + A10(n) * Z * W + A15(n) * (W ^ 2) + A18(n) * X * (W ^ 2) + A19(n) * Z * (X ^ 2) + A24(n) * U * (W ^ 2) + A27(n) * W * (U ^ 2))
-            Rn_100 = (i * (Lfeet / (Vsfeet ^ (1 / 3)) * Sqrt(32.200000000000003 * 100000 / 64))) / (0.000012816999999999999)
-            Cf_100 = 0.074999999999999997 / ((Log10(Rn_100) - 2) ^ 2)
-            Rn = vb_ms * eslora_wl / (viscosidad_cinematica)
-            Cf = 0.074999999999999997 / ((Log10(Rn) - 2) ^ 2)
-            Rt = desplazamiento_lbs * (Rt_100 + ((Cf + Ca) - Cf_100) * 0.5 * wetted_area * (i ^ 2) / (Vs ^ (2 / 3)))
+                Fn = vb_ms / (Sqrt(aceleracion * eslora_wl))
 
-            row_savitsky = dtsavitsky.NewRow
-            row_savitsky("vb_kn") = Round(vb_ms * 1.94384, 2)
-            row_savitsky("vb_ms") = Round(vb_ms, 2)
-            row_savitsky("fn") = Round(Fn, 2)
-            row_savitsky("rapp") = Round(Me.Rapp, 2)
-            row_savitsky("rtotal") = Round((Rt + Rapp), 2)
-            row_savitsky("ehp") = Round(((Rnh + Rapp) * vb_ms), 2)
-            row_savitsky("fnvol") = Round(Fn_vol)
-            dtsavitsky.Rows.Add(row_savitsky)
+                Rn = i * Lvs13 * Sqrt(32.200000000000003 * desplazamiento_lbs / 64) / 0.000012816999999999999
+                Cf = 0.074999999999999997 / ((Log10(Rn) - 2) ^ 2)
 
-        Next
+                Rt = (Rt_100 + ((Cf + Ca) - Cf_100) * 0.5 * wetted_area * (i ^ 2)) * desplazamiento_lbs
+                Rt = Rt * 0.453592 * aceleracion / 1000
+
+                row_savitsky = dtsavitsky.NewRow
+                row_savitsky("vb_kn") = Round(vb, 2)
+                row_savitsky("vb_ms") = Round(vb_ms, 2)
+                row_savitsky("fn") = Round(Fn, 2)
+                row_savitsky("fnvol") = Round(i, 2)
+                row_savitsky("rapp") = Round(Me.Rapp, 2)
+                row_savitsky("raire") = Round(raire, 2)
+                row_savitsky("rtotal") = Round(Rt + Rapp + raire, 2)
+                row_savitsky("ehp") = Round(Rt * vb_ms, 2) 'Pe en KW
+
+                dtsavitsky.Rows.Add(row_savitsky)
+
+            Next
+            ok = ok + 1
+        End If
+
+
 
 
 

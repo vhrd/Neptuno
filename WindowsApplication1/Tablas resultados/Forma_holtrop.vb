@@ -19,8 +19,8 @@
             .Columns(6).HeaderText = "Rb"
             .Columns(7).HeaderText = "Rtr"
             .Columns(8).HeaderText = "Ra"
-            .Columns(9).HeaderText = "Rtotal"
-            .Columns(10).HeaderText = "EHP"
+            .Columns(9).HeaderText = "Rtotal(KN)"
+            .Columns(10).HeaderText = "Pe(KW)"
 
 
         End With

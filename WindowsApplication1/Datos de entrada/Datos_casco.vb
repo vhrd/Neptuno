@@ -2,6 +2,11 @@
 Public Class Datos_casco
 
     Private Sub Datos_casco_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If metodo_savitsky = True And metodo_holtrop = False Then
+            txt_cmaestra.Enabled = False
+            txt_cwp.Enabled = False
+            txt_LCB.Enabled = False
+        End If
         Me.ToolTip1.IsBalloon = True
         txt_eslorawl.Text = eslora_wl
         txt_mangawl.Text = manga_wl
@@ -29,12 +34,19 @@ Public Class Datos_casco
         Cblock = txt_cblock.Text
         Cwaterplane = txt_cwp.Text
         Cmaestra = txt_cmaestra.Text
-        Cprismatico = Cblock / Cmaestra
+
+        Try
+            Cprismatico = Cblock / Cmaestra
+            Vs = eslora_wl * calado_medio * manga_wl * Cblock
+        Catch ex As Exception
+            Vs = 0
+        End Try
+
         LCBporcentaje = txt_LCB.Text
         LCBmetrico = (txt_LCB.Text / 100) * eslora_wl
 
-        Vs = eslora_wl * calado_medio * manga_wl * Cblock
         desplazamiento = Vs * densidad
+
         Me.Close()
     End Sub
 

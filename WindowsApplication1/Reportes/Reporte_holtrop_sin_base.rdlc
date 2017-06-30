@@ -45,6 +45,58 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>MÉTODO DE HOLTROP</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>11</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox23">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -982,13 +1034,16 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
               <Group Name="Detalles" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>resultados</DataSetName>
         <Top>8.72808cm</Top>
-        <Height>1.8cm</Height>
+        <Height>2.4cm</Height>
         <Width>19.82709cm</Width>
         <Visibility>
           <Hidden>=Parameters!holtrop.Value=false</Hidden>
@@ -1003,8 +1058,27 @@
         <ChartCategoryHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Group Name="Chart1_CategoryGroup" />
-              <Label>=Fields!vb_kn.Value</Label>
+              <Group Name="Chart1_CategoryGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!fn.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!fn.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!vb_kn.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <Label>=Fields!vb_kn.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+              <Label>=Fields!fn.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
@@ -1110,7 +1184,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Velocidad[Kn]</Caption>
+                  <Caption />
                   <Position>Far</Position>
                   <Style />
                 </ChartAxisTitle>
@@ -1223,7 +1297,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Potencia efectiva EHP (KW)</Caption>
+                  <Caption>Potencia efectiva Pe (KW)</Caption>
                   <Style />
                 </ChartAxisTitle>
                 <ChartMajorGridLines>
@@ -1313,7 +1387,7 @@
         <PageBreak>
           <BreakLocation>End</BreakLocation>
         </PageBreak>
-        <Top>11.05641cm</Top>
+        <Top>11.37391cm</Top>
         <Left>0.42016cm</Left>
         <Height>20.05479cm</Height>
         <Width>19.05246cm</Width>
@@ -2617,7 +2691,7 @@
         </TablixRowHierarchy>
         <DataSetName>datos</DataSetName>
         <Top>2.2987cm</Top>
-        <Left>0.42016cm</Left>
+        <Left>0cm</Left>
         <Height>6cm</Height>
         <Width>8.74354cm</Width>
         <ZIndex>3</ZIndex>
@@ -3655,7 +3729,7 @@
         </TablixRowHierarchy>
         <DataSetName>datos</DataSetName>
         <Top>2.2987cm</Top>
-        <Left>10.52917cm</Left>
+        <Left>10.88365cm</Left>
         <Height>6cm</Height>
         <Width>8.94344cm</Width>
         <ZIndex>4</ZIndex>
@@ -3669,41 +3743,44 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.1825cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.06692cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.10515cm</Width>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.30304cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.23111cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox74">
+                    <Textbox Name="Textbox90">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Velocidad</Value>
+                              <Value>MÉTODO DE SAVITSKY PRE-PLANEO</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -3715,7 +3792,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox74</rd:DefaultName>
+                      <rd:DefaultName>Textbox90</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3728,46 +3805,21 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>2</ColSpan>
+                    <ColSpan>8</ColSpan>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox76">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>N° froud</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox76</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Gray</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox77">
@@ -3777,7 +3829,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Resistencias [KN]</Value>
+                              <Value>Velocidad</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -3802,21 +3854,20 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>3</ColSpan>
+                    <ColSpan>2</ColSpan>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
-                <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox80">
+                    <Textbox Name="Textbox79">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>EHP</Value>
+                              <Value>N° froude</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -3828,7 +3879,84 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox80</rd:DefaultName>
+                      <rd:DefaultName>Textbox79</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>2</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox87">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Resistencias [KN]</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox87</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox85">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Pe</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox85</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3846,18 +3974,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23111cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox14">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>kn</Value>
+                              <Value>Kn</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -3869,7 +3997,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3886,7 +4014,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox62">
+                    <Textbox Name="Textbox63">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -3905,7 +4033,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox62</rd:DefaultName>
+                      <rd:DefaultName>Textbox63</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3922,7 +4050,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox64">
+                    <Textbox Name="Textbox65">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -3941,7 +4069,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox64</rd:DefaultName>
+                      <rd:DefaultName>Textbox65</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3958,14 +4086,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox66">
+                    <Textbox Name="Textbox67">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Rnh</Value>
+                              <Value>Fnvol</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -3977,7 +4105,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox66</rd:DefaultName>
+                      <rd:DefaultName>Textbox67</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3994,7 +4122,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox68">
+                    <Textbox Name="Textbox69">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -4013,7 +4141,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox68</rd:DefaultName>
+                      <rd:DefaultName>Textbox69</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -4030,7 +4158,43 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox70">
+                    <Textbox Name="Textbox71">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Raire</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox71</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox73">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -4049,7 +4213,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox70</rd:DefaultName>
+                      <rd:DefaultName>Textbox73</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -4066,14 +4230,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox72">
+                    <Textbox Name="Textbox75">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>KW</Value>
+                              <Value>Kw</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -4085,7 +4249,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox72</rd:DefaultName>
+                      <rd:DefaultName>Textbox75</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -4103,7 +4267,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23111cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -4203,14 +4367,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="rnh">
+                    <Textbox Name="fnvol">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!rnh.Value</Value>
+                              <Value>=Fields!fnvol.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4219,7 +4383,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>rnh</rd:DefaultName>
+                      <rd:DefaultName>fnvol</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -4252,6 +4416,38 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>rapp1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="raire">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!raire.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>raire</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -4342,6 +4538,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -4353,18 +4550,21 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
               <Group Name="Detalles4" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>resultados_radojcic</DataSetName>
-        <Top>29.09345cm</Top>
-        <Left>1.65012cm</Left>
-        <Height>0.69333cm</Height>
-        <Width>0.73605cm</Width>
+        <DataSetName>resultados_savitsky</DataSetName>
+        <Top>31.66499cm</Top>
+        <Left>0.42016cm</Left>
+        <Height>2.4cm</Height>
+        <Width>19.05246cm</Width>
         <ZIndex>5</ZIndex>
         <Visibility>
-          <Hidden>=Parameters!radojcic.Value=false</Hidden>
+          <Hidden>=Parameters!savitsky.Value=false</Hidden>
         </Visibility>
         <Style>
           <Border>
@@ -4378,15 +4578,10 @@
             <ChartMember>
               <Group Name="Chart2_CategoryGroup">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!vb_ms.Value</GroupExpression>
+                  <GroupExpression>=Fields!vb_kn.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!vb_ms.Value</Value>
-                </SortExpression>
-              </SortExpressions>
-              <Label>=Fields!vb_ms.Value</Label>
+              <Label>=Fields!vb_kn.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
@@ -4432,7 +4627,7 @@
                 </ChartDataLabel>
               </ChartEmptyPoints>
               <ChartItemInLegend>
-                <LegendText>Resistencia total (KN)</LegendText>
+                <LegendText>Resistencoa total (KN)</LegendText>
               </ChartItemInLegend>
               <ValueAxisName>Primary</ValueAxisName>
               <CategoryAxisName>Primary</CategoryAxisName>
@@ -4473,7 +4668,7 @@
               <ChartItemInLegend>
                 <LegendText>Potencia efectiva (KW)</LegendText>
               </ChartItemInLegend>
-              <ValueAxisName>Secondary</ValueAxisName>
+              <ValueAxisName>Primary</ValueAxisName>
               <CategoryAxisName>Primary</CategoryAxisName>
               <ChartSmartLabel>
                 <CalloutLineColor>Black</CalloutLineColor>
@@ -4496,7 +4691,7 @@
                 </ChartAxisTitle>
                 <IntervalType>Number</IntervalType>
                 <ChartMajorGridLines>
-                  <Enabled>False</Enabled>
+                  <Enabled>True</Enabled>
                   <Style>
                     <Border>
                       <Color>Gainsboro</Color>
@@ -4504,6 +4699,7 @@
                   </Style>
                 </ChartMajorGridLines>
                 <ChartMinorGridLines>
+                  <Enabled>True</Enabled>
                   <Style>
                     <Border>
                       <Color>Gainsboro</Color>
@@ -4511,10 +4707,14 @@
                     </Border>
                   </Style>
                 </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <IntervalType>Auto</IntervalType>
+                </ChartMajorTickMarks>
                 <ChartMinorTickMarks>
                   <Length>0.5</Length>
                 </ChartMinorTickMarks>
                 <CrossAt>NaN</CrossAt>
+                <Scalar>true</Scalar>
                 <Minimum>NaN</Minimum>
                 <Maximum>NaN</Maximum>
                 <ChartAxisScaleBreak>
@@ -4598,10 +4798,8 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Potencia efectiva EHP [KW]</Caption>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
+                  <Caption>Potencia efectiva Pe (KW)</Caption>
+                  <Style />
                 </ChartAxisTitle>
                 <ChartMajorGridLines>
                   <Style>
@@ -4632,18 +4830,19 @@
             </ChartValueAxes>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
-              <BackgroundHatchType>None</BackgroundHatchType>
             </Style>
           </ChartArea>
         </ChartAreas>
         <ChartLegends>
           <ChartLegend Name="Default">
             <Style>
+              <Border>
+                <Width>2.5pt</Width>
+              </Border>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontSize>8pt</FontSize>
             </Style>
             <Position>BottomCenter</Position>
-            <DockOutsideChartArea>true</DockOutsideChartArea>
             <ChartLegendTitle>
               <Caption />
               <Style>
@@ -4658,7 +4857,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>Resistencia método de Radojcic</Caption>
+            <Caption>Resistencia método de SAVITSKY pre planeo</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontFamily>BankGothic Lt BT</FontFamily>
@@ -4685,14 +4884,17 @@
             <VerticalAlign>Top</VerticalAlign>
           </Style>
         </ChartNoDataMessage>
-        <DataSetName>resultados_radojcic</DataSetName>
-        <Top>29.78678cm</Top>
-        <Left>1.86041cm</Left>
-        <Height>0.73948cm</Height>
-        <Width>1.3351cm</Width>
+        <DataSetName>resultados_savitsky</DataSetName>
+        <PageBreak>
+          <BreakLocation>End</BreakLocation>
+        </PageBreak>
+        <Top>34.39166cm</Top>
+        <Left>0.42016cm</Left>
+        <Height>20.05479cm</Height>
+        <Width>19.05246cm</Width>
         <ZIndex>6</ZIndex>
         <Visibility>
-          <Hidden>=Parameters!radojcic.Value=false</Hidden>
+          <Hidden>=Parameters!savitsky.Value=false</Hidden>
         </Visibility>
         <Style>
           <Border>
@@ -4703,8 +4905,72 @@
           <BackgroundGradientType>None</BackgroundGradientType>
         </Style>
       </Chart>
+      <Textbox Name="Textbox99">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fn</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox98</rd:DefaultName>
+        <Top>28.94888cm</Top>
+        <Left>16.65752cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.85958cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox98">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Kn</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox98</rd:DefaultName>
+        <Top>28.48999cm</Top>
+        <Left>16.65752cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.85958cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>12.2485in</Height>
+    <Height>21.43561in</Height>
     <Style />
   </Body>
   <Width>7.80594in</Width>
@@ -4734,7 +5000,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>INFORME DE RESISTENCIA AL AVANCE - Holtrop</Value>
+                  <Value>INFORME DE RESISTENCIA AL AVANCE </Value>
                   <Style>
                     <FontFamily>BankGothic Md BT</FontFamily>
                     <FontSize>26pt</FontSize>
@@ -4771,7 +5037,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.67056cm</Height>
+      <Height>0.67054cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -4792,7 +5058,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.07056cm</Top>
+          <Top>0.07054cm</Top>
           <Left>8.88682cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
@@ -4993,7 +5259,7 @@
         <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="resultados_radojcic">
+    <DataSet Name="resultados_savitsky">
       <Query>
         <DataSourceName>DataSet_RT</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -5011,12 +5277,16 @@
           <DataField>fn</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="rnh">
-          <DataField>rnh</DataField>
+        <Field Name="fnvol">
+          <DataField>fnvol</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="rapp">
           <DataField>rapp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="raire">
+          <DataField>raire</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="rtotal">
@@ -5030,8 +5300,8 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_RT</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\victor\Documents\Visual Studio 2013\Projects\Software_Resistencia_avance\WindowsApplication1\DataSet_RT.xsd</rd:SchemaPath>
-        <rd:TableName>tabla_radojcic</rd:TableName>
+        <rd:SchemaPath>C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\DataSet_RT.xsd</rd:SchemaPath>
+        <rd:TableName>tabla_savitsky</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -5040,11 +5310,6 @@
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="holtrop">
-      <DataType>Boolean</DataType>
-      <Nullable>true</Nullable>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="radojcic">
       <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
       <Prompt>ReportParameter1</Prompt>

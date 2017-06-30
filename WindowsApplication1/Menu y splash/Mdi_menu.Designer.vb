@@ -25,7 +25,6 @@ Partial Class Mdi_menu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Mdi_menu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATOSENTRADAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -72,7 +71,6 @@ Partial Class Mdi_menu
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
@@ -108,16 +106,10 @@ Partial Class Mdi_menu
         '
         'ArchivoToolStripMenuItem
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.AbrirToolStripMenuItem, Me.GuardarToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbrirToolStripMenuItem, Me.GuardarToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
-        '
-        'NuevoToolStripMenuItem
-        '
-        Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
-        Me.NuevoToolStripMenuItem.Text = "Nuevo"
         '
         'AbrirToolStripMenuItem
         '
@@ -209,7 +201,7 @@ Partial Class Mdi_menu
         '
         Me.PlaneoToolStripMenuItem.Name = "PlaneoToolStripMenuItem"
         Me.PlaneoToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.PlaneoToolStripMenuItem.Text = "Planeo"
+        Me.PlaneoToolStripMenuItem.Text = "Pre planeo"
         '
         'ToolStripSeparator14
         '
@@ -232,13 +224,13 @@ Partial Class Mdi_menu
         'SeleccionarToolStripMenuItem
         '
         Me.SeleccionarToolStripMenuItem.Name = "SeleccionarToolStripMenuItem"
-        Me.SeleccionarToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.SeleccionarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SeleccionarToolStripMenuItem.Text = "Seleccionar"
         '
         'InfomaciónToolStripMenuItem
         '
         Me.InfomaciónToolStripMenuItem.Name = "InfomaciónToolStripMenuItem"
-        Me.InfomaciónToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.InfomaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InfomaciónToolStripMenuItem.Text = "Infomación"
         '
         'SOLUCIÓNToolStripMenuItem
@@ -300,24 +292,24 @@ Partial Class Mdi_menu
         'HoltropToolStripMenuItem
         '
         Me.HoltropToolStripMenuItem.Name = "HoltropToolStripMenuItem"
-        Me.HoltropToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HoltropToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.HoltropToolStripMenuItem.Text = "Holtrop"
         '
         'SavitskyToolStripMenuItem
         '
         Me.SavitskyToolStripMenuItem.Name = "SavitskyToolStripMenuItem"
-        Me.SavitskyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SavitskyToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SavitskyToolStripMenuItem.Text = "Savitsky"
         '
         'ToolStripSeparator15
         '
         Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
-        Me.ToolStripSeparator15.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator15.Size = New System.Drawing.Size(113, 6)
         '
         'TodosToolStripMenuItem1
         '
         Me.TodosToolStripMenuItem1.Name = "TodosToolStripMenuItem1"
-        Me.TodosToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.TodosToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.TodosToolStripMenuItem1.Text = "Todos"
         '
         'VentanasToolStripMenuItem
@@ -384,21 +376,12 @@ Partial Class Mdi_menu
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1, Me.ToolStripSeparator7, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10, Me.ToolStripButton11, Me.ToolStripButton12, Me.ToolStripSeparator8, Me.ToolStripButton13, Me.ToolStripSeparator9, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator12, Me.ToolStripButton14, Me.ToolStripSeparator10, Me.ToolStripButton6})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2, Me.ToolStripButton1, Me.ToolStripSeparator7, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10, Me.ToolStripButton11, Me.ToolStripButton12, Me.ToolStripSeparator8, Me.ToolStripButton13, Me.ToolStripSeparator9, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator12, Me.ToolStripButton14, Me.ToolStripSeparator10, Me.ToolStripButton6})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1616, 25)
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton3
-        '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton3.Text = "Nuevo"
         '
         'ToolStripButton2
         '
@@ -552,7 +535,7 @@ Partial Class Mdi_menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1616, 741)
+        Me.ClientSize = New System.Drawing.Size(1616, 733)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.pbBackground)
         Me.Controls.Add(Me.MenuStrip1)
@@ -592,7 +575,6 @@ Partial Class Mdi_menu
     Friend WithEvents GuardarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents NuevoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HoltropToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GraficosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentanasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -605,7 +587,6 @@ Partial Class Mdi_menu
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton

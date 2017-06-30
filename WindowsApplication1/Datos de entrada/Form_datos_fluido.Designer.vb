@@ -35,8 +35,8 @@ Partial Class Form_datos_fluido
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_densidad_aire = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -170,6 +170,13 @@ Partial Class Form_datos_fluido
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Aire"
         '
+        'txt_densidad_aire
+        '
+        Me.txt_densidad_aire.Location = New System.Drawing.Point(287, 24)
+        Me.txt_densidad_aire.Name = "txt_densidad_aire"
+        Me.txt_densidad_aire.Size = New System.Drawing.Size(141, 24)
+        Me.txt_densidad_aire.TabIndex = 1
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -178,13 +185,6 @@ Partial Class Form_datos_fluido
         Me.Label3.Size = New System.Drawing.Size(97, 18)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Aire (kg/m{3):"
-        '
-        'txt_densidad_aire
-        '
-        Me.txt_densidad_aire.Location = New System.Drawing.Point(287, 24)
-        Me.txt_densidad_aire.Name = "txt_densidad_aire"
-        Me.txt_densidad_aire.Size = New System.Drawing.Size(141, 24)
-        Me.txt_densidad_aire.TabIndex = 1
         '
         'Form_datos_fluido
         '

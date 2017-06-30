@@ -1649,6 +1649,8 @@ Partial Public Class DataSet_RT
 
         Private columnfn As Global.System.Data.DataColumn
 
+        Private columnfnvol As Global.System.Data.DataColumn
+
         Private columnrapp As Global.System.Data.DataColumn
 
         Private columnraire As Global.System.Data.DataColumn
@@ -1656,8 +1658,6 @@ Partial Public Class DataSet_RT
         Private columnrtotal As Global.System.Data.DataColumn
 
         Private columnehp As Global.System.Data.DataColumn
-
-        Private columnfnvol As Global.System.Data.DataColumn
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
@@ -1720,6 +1720,14 @@ Partial Public Class DataSet_RT
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public ReadOnly Property fnvolColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfnvol
+            End Get
+        End Property
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public ReadOnly Property rappColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnrapp
@@ -1747,14 +1755,6 @@ Partial Public Class DataSet_RT
         Public ReadOnly Property ehpColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnehp
-            End Get
-        End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public ReadOnly Property fnvolColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnfnvol
             End Get
         End Property
 
@@ -1795,9 +1795,9 @@ Partial Public Class DataSet_RT
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Overloads Function Addtabla_savitskyRow(ByVal vb_kn As String, ByVal vb_ms As String, ByVal fn As String, ByVal rapp As String, ByVal raire As String, ByVal rtotal As String, ByVal ehp As String, ByVal fnvol As String) As tabla_savitskyRow
+        Public Overloads Function Addtabla_savitskyRow(ByVal vb_kn As String, ByVal vb_ms As String, ByVal fn As String, ByVal fnvol As String, ByVal rapp As String, ByVal raire As String, ByVal rtotal As String, ByVal ehp As String) As tabla_savitskyRow
             Dim rowtabla_savitskyRow As tabla_savitskyRow = CType(Me.NewRow, tabla_savitskyRow)
-            Dim columnValuesArray() As Object = New Object() {vb_kn, vb_ms, fn, rapp, raire, rtotal, ehp, fnvol}
+            Dim columnValuesArray() As Object = New Object() {vb_kn, vb_ms, fn, fnvol, rapp, raire, rtotal, ehp}
             rowtabla_savitskyRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtabla_savitskyRow)
             Return rowtabla_savitskyRow
@@ -1823,11 +1823,11 @@ Partial Public Class DataSet_RT
             Me.columnvb_kn = MyBase.Columns("vb_kn")
             Me.columnvb_ms = MyBase.Columns("vb_ms")
             Me.columnfn = MyBase.Columns("fn")
+            Me.columnfnvol = MyBase.Columns("fnvol")
             Me.columnrapp = MyBase.Columns("rapp")
             Me.columnraire = MyBase.Columns("raire")
             Me.columnrtotal = MyBase.Columns("rtotal")
             Me.columnehp = MyBase.Columns("ehp")
-            Me.columnfnvol = MyBase.Columns("fnvol")
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -1839,6 +1839,8 @@ Partial Public Class DataSet_RT
             MyBase.Columns.Add(Me.columnvb_ms)
             Me.columnfn = New Global.System.Data.DataColumn("fn", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfn)
+            Me.columnfnvol = New Global.System.Data.DataColumn("fnvol", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfnvol)
             Me.columnrapp = New Global.System.Data.DataColumn("rapp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnrapp)
             Me.columnraire = New Global.System.Data.DataColumn("raire", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1847,8 +1849,6 @@ Partial Public Class DataSet_RT
             MyBase.Columns.Add(Me.columnrtotal)
             Me.columnehp = New Global.System.Data.DataColumn("ehp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnehp)
-            Me.columnfnvol = New Global.System.Data.DataColumn("fnvol", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnfnvol)
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -3141,6 +3141,21 @@ Partial Public Class DataSet_RT
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Property fnvol() As String
+            Get
+                Try
+                    Return CType(Me(Me.tabletabla_savitsky.fnvolColumn), String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'fnvol' de la tabla 'tabla_savitsky' es DBNull.", e)
+                End Try
+            End Get
+            Set(value As String)
+                Me(Me.tabletabla_savitsky.fnvolColumn) = value
+            End Set
+        End Property
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Property rapp() As String
             Get
                 Try
@@ -3201,21 +3216,6 @@ Partial Public Class DataSet_RT
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property fnvol() As String
-            Get
-                Try
-                    Return CType(Me(Me.tabletabla_savitsky.fnvolColumn), String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'fnvol' de la tabla 'tabla_savitsky' es DBNull.", e)
-                End Try
-            End Get
-            Set(value As String)
-                Me(Me.tabletabla_savitsky.fnvolColumn) = value
-            End Set
-        End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Function Isvb_knNull() As Boolean
             Return Me.IsNull(Me.tabletabla_savitsky.vb_knColumn)
         End Function
@@ -3248,6 +3248,18 @@ Partial Public Class DataSet_RT
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Sub SetfnNull()
             Me(Me.tabletabla_savitsky.fnColumn) = Global.System.Convert.DBNull
+        End Sub
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Function IsfnvolNull() As Boolean
+            Return Me.IsNull(Me.tabletabla_savitsky.fnvolColumn)
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Sub SetfnvolNull()
+            Me(Me.tabletabla_savitsky.fnvolColumn) = Global.System.Convert.DBNull
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -3296,18 +3308,6 @@ Partial Public Class DataSet_RT
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Sub SetehpNull()
             Me(Me.tabletabla_savitsky.ehpColumn) = Global.System.Convert.DBNull
-        End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Function IsfnvolNull() As Boolean
-            Return Me.IsNull(Me.tabletabla_savitsky.fnvolColumn)
-        End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Sub SetfnvolNull()
-            Me(Me.tabletabla_savitsky.fnvolColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
 

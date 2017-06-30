@@ -29,6 +29,7 @@ Partial Class Form_datos_forma_casco
         Me.rb_u = New System.Windows.Forms.RadioButton()
         Me.rb_v = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.txt_centro_area_bulbo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_area_transv_bulbo = New System.Windows.Forms.TextBox()
@@ -41,7 +42,6 @@ Partial Class Form_datos_forma_casco
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -107,6 +107,16 @@ Partial Class Form_datos_forma_casco
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Bulbo"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(214, 105)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(82, 18)
+        Me.LinkLabel1.TabIndex = 4
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Ver imagen"
         '
         'txt_centro_area_bulbo
         '
@@ -207,16 +217,6 @@ Partial Class Form_datos_forma_casco
         Me.btn_guardar.Text = "Guardar"
         Me.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_guardar.UseVisualStyleBackColor = True
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(214, 105)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(82, 18)
-        Me.LinkLabel1.TabIndex = 4
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Ver imagen"
         '
         'Form_datos_forma_casco
         '

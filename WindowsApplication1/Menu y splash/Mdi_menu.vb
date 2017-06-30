@@ -320,7 +320,18 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
                                 num_helices = text
                             Case 36
                                 paso = text
-
+                            Case 37
+                                Bpx = text
+                            Case 38
+                                iee = text
+                            Case 39
+                                AT = text
+                            Case 40
+                                Ax = text
+                            Case 41
+                                densidad_aire = text
+                            Case 42
+                                factor_servicio = text
                         End Select
 
                         lineNumber += 1
@@ -393,14 +404,18 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
             archivo.WriteLine("" & angulo_entrada & "")
             archivo.WriteLine("" & area_frontal & "")
             archivo.WriteLine("" & num_helices & "")
-            archivo.WriteLine("" & paso & "")
-
+            archivo.WriteLine("" & Bpx & "")
+            archivo.WriteLine("" & iee & "")
+            archivo.WriteLine("" & AT & "")
+            archivo.WriteLine("" & Ax & "")
+            archivo.WriteLine("" & densidad_aire & "")
+            archivo.WriteLine("" & factor_servicio & "")
             archivo.close()
         Catch ex As Exception
 
         End Try
     End Sub
-    Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
+    Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
 
     End Sub
@@ -615,19 +630,12 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
         If dtsavitsky.Rows.Count = 0 And dtholtrop.Rows.Count = 0 Then
             MsgBox("No existen cálculos para ningún método.", MsgBoxStyle.Exclamation, "INFORMACIÓN")
         Else
-            If metodo_holtrop = True Then
+           
                 almacenar_holtrop() 'calculos
-                llenar_datos()
-
-            End If
-            If metodo_savitsky = True Then
                 almacenar_savitsky()
                 llenar_datos()
-
-            End If
-            If metodo_holtrop = True Or metodo_savitsky = True Then
                 llamar_reporte()
-            End If
+           
 
         End If
     End Sub

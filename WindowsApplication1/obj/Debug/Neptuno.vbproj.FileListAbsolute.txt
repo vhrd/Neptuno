@@ -69,7 +69,6 @@ C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.F
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_reporte_holtrop_sin_base.resources
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_solucion_Holtrop_mennem.resources
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.form_nomografo.resources
-C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_redojcic.resources
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.vbproj.GenerateResource.Cache
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\RdlCompile.cache
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\RdlCompile.compiled
@@ -78,3 +77,4 @@ C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.a
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_factor_servicio.resources
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_imagen_eslora_mojada.resources
 C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Form_imagen_manga_pantoque.resources
+C:\Users\victor\Documents\GitHub\Neptuno\WindowsApplication1\obj\Debug\Neptuno.Forma_savitsky.resources

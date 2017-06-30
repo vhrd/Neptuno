@@ -191,22 +191,22 @@
     <Compile Include="Datos de entrada\Form_factor_servicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="imagenes\Form_imagen_bulbo.Designer.vb">
+    <Compile Include="Imagenes\Form_imagen_bulbo.Designer.vb">
       <DependentUpon>Form_imagen_bulbo.vb</DependentUpon>
     </Compile>
-    <Compile Include="imagenes\Form_imagen_bulbo.vb">
+    <Compile Include="Imagenes\Form_imagen_bulbo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="imagenes\Form_imagen_eslora_mojada.Designer.vb">
+    <Compile Include="Imagenes\Form_imagen_eslora_mojada.Designer.vb">
       <DependentUpon>Form_imagen_eslora_mojada.vb</DependentUpon>
     </Compile>
-    <Compile Include="imagenes\Form_imagen_eslora_mojada.vb">
+    <Compile Include="Imagenes\Form_imagen_eslora_mojada.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="imagenes\Form_imagen_manga_pantoque.Designer.vb">
+    <Compile Include="Imagenes\Form_imagen_manga_pantoque.Designer.vb">
       <DependentUpon>Form_imagen_manga_pantoque.vb</DependentUpon>
     </Compile>
-    <Compile Include="imagenes\Form_imagen_manga_pantoque.vb">
+    <Compile Include="Imagenes\Form_imagen_manga_pantoque.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu y splash\Form_splash.Designer.vb">
@@ -285,12 +285,6 @@
     <Compile Include="Tablas resultados\form_nomografo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tablas resultados\Form_redojcic.Designer.vb">
-      <DependentUpon>Form_redojcic.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tablas resultados\Form_redojcic.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="botones.resx">
@@ -329,13 +323,13 @@
     <EmbeddedResource Include="Datos de entrada\Form_factor_servicio.resx">
       <DependentUpon>Form_factor_servicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="imagenes\Form_imagen_bulbo.resx">
+    <EmbeddedResource Include="Imagenes\Form_imagen_bulbo.resx">
       <DependentUpon>Form_imagen_bulbo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="imagenes\Form_imagen_eslora_mojada.resx">
+    <EmbeddedResource Include="Imagenes\Form_imagen_eslora_mojada.resx">
       <DependentUpon>Form_imagen_eslora_mojada.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="imagenes\Form_imagen_manga_pantoque.resx">
+    <EmbeddedResource Include="Imagenes\Form_imagen_manga_pantoque.resx">
       <DependentUpon>Form_imagen_manga_pantoque.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu y splash\Form_splash.resx">
@@ -369,11 +363,11 @@
     <EmbeddedResource Include="Soluciones\Form_solucion_Holtrop_mennem.resx">
       <DependentUpon>Form_solucion_Holtrop_mennem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tablas resultados\Forma_savitsky.resx">
+      <DependentUpon>Forma_savitsky.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tablas resultados\form_nomografo.resx">
       <DependentUpon>form_nomografo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tablas resultados\Form_redojcic.resx">
-      <DependentUpon>Form_redojcic.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

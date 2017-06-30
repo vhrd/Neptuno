@@ -51,15 +51,15 @@ Partial Class Forma_holtrop
         Me.TablartBindingSource.DataMember = "tabla_rt"
         Me.TablartBindingSource.DataSource = Me.DataSet_RT
         '
-        'Form_datagrid_reporte
+        'Forma_holtrop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 310)
+        Me.ClientSize = New System.Drawing.Size(661, 288)
         Me.Controls.Add(Me.datagrid_1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form_datagrid_reporte"
-        Me.Text = "RESULTADOS METODO DE HOLTROP"
+        Me.Name = "Forma_holtrop"
+        Me.Text = "RESULTADOS MÉTODO DE HOLTROP"
         CType(Me.datagrid_1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet_RT, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TablartBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

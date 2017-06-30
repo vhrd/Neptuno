@@ -16,10 +16,10 @@
     End Sub
 
     
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         Form_imagen_eslora_mojada.MdiParent = Mdi_menu
         Form_imagen_eslora_mojada.Show()
     End Sub
