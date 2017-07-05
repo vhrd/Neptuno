@@ -24,8 +24,8 @@ Partial Class Form_factor_servicio
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_factor_servicio))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
@@ -43,6 +43,13 @@ Partial Class Form_factor_servicio
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "F.S."
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(149, 36)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 24)
+        Me.TextBox1.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -52,13 +59,6 @@ Partial Class Form_factor_servicio
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Factor de servicio:"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(149, 36)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 24)
-        Me.TextBox1.TabIndex = 1
-        '
         'btn_salir
         '
         Me.btn_salir.Image = CType(resources.GetObject("btn_salir.Image"), System.Drawing.Image)
@@ -66,7 +66,7 @@ Partial Class Form_factor_servicio
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(83, 35)
         Me.btn_salir.TabIndex = 8
-        Me.btn_salir.Text = "Salir"
+        Me.btn_salir.Text = "Cancelar"
         Me.btn_salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_salir.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class Form_factor_servicio
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(83, 35)
         Me.btn_guardar.TabIndex = 7
-        Me.btn_guardar.Text = "Guardar"
+        Me.btn_guardar.Text = "OK"
         Me.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_guardar.UseVisualStyleBackColor = True
         '

@@ -13,12 +13,8 @@ Public Class Mdi_menu
     Public fuente1 As New ReportDataSource
     Public fuente2 As New ReportDataSource
     Private Sub CASCOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CASCOToolStripMenuItem.Click
-        If metodo_holtrop = False And metodo_savitsky = False Then
-            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
-        Else
-            Datos_casco.MdiParent = Me
-            Datos_casco.Show()
-        End If
+        Datos_casco.MdiParent = Me
+        Datos_casco.Show()
      
     End Sub
     Private Sub myMdiControlPaint(ByVal sender As Object, _
@@ -90,14 +86,7 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
      
 
 
-        Forma_holtrop.MdiParent = Me
-        Forma_holtrop.WindowState = FormWindowState.Minimized
-        Forma_holtrop.Show()
-
-        Form_grafico.MdiParent = Me
-        Form_grafico.WindowState = FormWindowState.Minimized
-        Form_grafico.Show()
-
+        
 
 
         Me.WindowState = FormWindowState.Maximized
@@ -127,31 +116,22 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
 
 
 
-    Private Sub OBTENERSOLUCIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OBTENERSOLUCIÓNToolStripMenuItem.Click
-        Form_solucion_Holtrop_mennem.MdiParent = Me
-        Form_solucion_Holtrop_mennem.Show()
+    Private Sub OBTENERSOLUCIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
 
     End Sub
 
 
 
     Private Sub PropulsiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PropulsiónToolStripMenuItem.Click
-        If metodo_holtrop = False And metodo_savitsky = False Then
-            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
-        Else
-            Form_datos_propusion.MdiParent = Me
-            Form_datos_propusion.Show()
-        End If
+         Form_datos_propusion.MdiParent = Me
+        Form_datos_propusion.Show()
         
     End Sub
 
     Private Sub FormaDelCascoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormaDelCascoToolStripMenuItem.Click
-        If metodo_holtrop = False And metodo_savitsky = False Then
-            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
-        Else
-            Form_datos_forma_casco.MdiParent = Me
-            Form_datos_forma_casco.Show()
-        End If
+        Form_datos_forma_casco.MdiParent = Me
+        Form_datos_forma_casco.Show()
        
     End Sub
 
@@ -167,12 +147,8 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
 
 
     Private Sub ApendicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApendicesToolStripMenuItem.Click
-        If metodo_holtrop = False And metodo_savitsky = False Then
-            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
-        Else
-            Form_apendices.MdiParent = Me
-            Form_apendices.Show()
-        End If
+         Form_apendices.MdiParent = Me
+        Form_apendices.Show()
         
     End Sub
 
@@ -233,13 +209,12 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
             openFileDialog1.Filter = "Archivos(*.rt)|*.rt"
             openFileDialog1.FilterIndex = 1
             If openFileDialog1.ShowDialog() = DialogResult.OK Then
-
                 ruta_archivo = openFileDialog1.FileName
             End If
 
             Using fs As FileStream = New FileStream("" & ruta_archivo & "", FileMode.Open, FileAccess.Read, FileShare.Read)
                 Using reader As StreamReader = New StreamReader(fs)
-                    Const maxLines As Integer = 10
+                    Const maxLines As Integer = 50
                     Dim lineNumber As Integer = 0
                     Dim text As String
 
@@ -259,7 +234,6 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
                                 manga_wl = text
                             Case 6
                                 puntal = text
-
                             Case 7
                                 calado_popa = text
                             Case 8
@@ -331,19 +305,25 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
                             Case 41
                                 densidad_aire = text
                             Case 42
-                                factor_servicio = text
-                        End Select
+                                area_amidship = text
+                            Case 43
+                                areaT_bulbo = text
+                            Case 44
+                                centroV_area_bulbo = text
 
+                        End Select
                         lineNumber += 1
                     End While
                 End Using
             End Using
+
         Catch ex As Exception
 
         End Try
     End Sub
 
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
+        '   Dim datos_guardar() = {proyecto, embarcacion, ingeniero,eslora_total,eslora_wl,manga_maxima,manga_wl,puntal,calado_popa,calado_proa,calado_medio,LCBporcentaje,LCBmetrico,Cblock,Cwaterplane,Cmaestra,Cprismatico,desplazamiento,Vs,Sapp,aceleracion,factor_formas,c13,forma_casco,Cstern,areaT_bulbo,centroV_area_bulbo,densidad,viscosidad_cinematica,tipo_fluido,Fn,factor_formas_eq,I,II,III,}
         guardar()
     End Sub
     Sub guardar()
@@ -351,16 +331,16 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
         Try
             SaveFileDialog1.Filter = "rt files (*.rt)|*.rt|All files (*.*)|*.*"
             SaveFileDialog1.FilterIndex = 1
-            If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
-                ruta_archivo = SaveFileDialog1.FileName
-            End If
+            
 
             Dim obj As New Object
 
             Dim archivo As New Object
 
             Dim ruta As String = ruta_archivo 'Ej: Documentos\archivo1.txt
-
+            If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
+                ruta_archivo = SaveFileDialog1.FileName
+            End If
 
 
             obj = CreateObject("Scripting.FileSystemObject")
@@ -368,48 +348,51 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
             archivo = obj.CreateTextFile(ruta, True)
 
             'Luego agregas las lineas que quieras al archivo
-            archivo.WriteLine("")
-            archivo.WriteLine("" & proyecto & "")
-            archivo.WriteLine("" & embarcacion & "")
-            archivo.WriteLine("" & ingeniero & "")
-            archivo.WriteLine("" & eslora_wl & "")
-            archivo.WriteLine("" & manga_wl & "")
-            archivo.WriteLine("" & puntal & "")
-            archivo.WriteLine("" & calado_popa & "")
-            archivo.WriteLine("" & calado_proa & "")
-            archivo.WriteLine("" & calado_medio & "")
-            archivo.WriteLine("" & LCBporcentaje & "")
-            archivo.WriteLine("" & LCBmetrico & "")
-            archivo.WriteLine("" & Cblock & "")
-            archivo.WriteLine("" & Cwaterplane & "")
-            archivo.WriteLine("" & Cmaestra & "")
-            archivo.WriteLine("" & Cprismatico & "")
-            archivo.WriteLine("" & desplazamiento & "")
-            archivo.WriteLine("" & Vs & "")
-            archivo.WriteLine("" & aceleracion & "")
+            archivo.WriteLine("") '0
+            archivo.WriteLine("" & proyecto & "") '1
+            archivo.WriteLine("" & embarcacion & "") '2
+            archivo.WriteLine("" & ingeniero & "") '3
+            archivo.WriteLine("" & eslora_wl & "") '4
+            archivo.WriteLine("" & manga_wl & "") '5
+            archivo.WriteLine("" & puntal & "") '6
+            archivo.WriteLine("" & calado_popa & "") '7
+            archivo.WriteLine("" & calado_proa & "") '8
+            archivo.WriteLine("" & calado_medio & "") '9
+            archivo.WriteLine("" & LCBporcentaje & "") '10
+            archivo.WriteLine("" & LCBmetrico & "") '11
+            archivo.WriteLine("" & Cblock & "") '12
+            archivo.WriteLine("" & Cwaterplane & "") '13
+            archivo.WriteLine("" & Cmaestra & "") '14
+            archivo.WriteLine("" & Cprismatico & "") '15
+            archivo.WriteLine("" & desplazamiento & "") '16
+            archivo.WriteLine("" & Vs & "") '17
+            archivo.WriteLine("" & aceleracion & "") '18
             archivo.WriteLine("" & factor_formas & "")
-            archivo.WriteLine("" & viscosidad_cinematica & "")
-            archivo.WriteLine("" & forma_casco & "")
-            archivo.WriteLine("" & Cstern & "")
-            archivo.WriteLine("" & densidad & "")
-            archivo.WriteLine("" & tipo_fluido & "")
-            archivo.WriteLine("" & Rapp_porcentaje & "")
-            archivo.WriteLine("" & diametro_thruster & "")
-            archivo.WriteLine("" & coef_thruster & "")
-            archivo.WriteLine("" & calculo_raap & "")
-            archivo.WriteLine("" & area_transom & "")
-            archivo.WriteLine("" & tipo_propulsion & "")
-            archivo.WriteLine("" & diametro_helice & "")
-            archivo.WriteLine("" & area_expandida & "")
-            archivo.WriteLine("" & angulo_entrada & "")
-            archivo.WriteLine("" & area_frontal & "")
-            archivo.WriteLine("" & num_helices & "")
-            archivo.WriteLine("" & Bpx & "")
-            archivo.WriteLine("" & iee & "")
-            archivo.WriteLine("" & AT & "")
-            archivo.WriteLine("" & Ax & "")
-            archivo.WriteLine("" & densidad_aire & "")
-            archivo.WriteLine("" & factor_servicio & "")
+            archivo.WriteLine("" & viscosidad_cinematica & "") '19
+            archivo.WriteLine("" & forma_casco & "") '20
+            archivo.WriteLine("" & Cstern & "") '21
+            archivo.WriteLine("" & densidad & "") '22
+            archivo.WriteLine("" & tipo_fluido & "") '23
+            archivo.WriteLine("" & Rapp_porcentaje & "") '24
+            archivo.WriteLine("" & diametro_thruster & "") '25
+            archivo.WriteLine("" & coef_thruster & "") '26
+            archivo.WriteLine("" & calculo_raap & "") '27
+            archivo.WriteLine("" & area_transom & "") '28
+            archivo.WriteLine("" & tipo_propulsion & "") '29
+            archivo.WriteLine("" & diametro_helice & "") '30
+            archivo.WriteLine("" & area_expandida & "") '31
+            archivo.WriteLine("" & angulo_entrada & "") '32
+            archivo.WriteLine("" & area_frontal & "") '33
+            archivo.WriteLine("" & num_helices & "") '34
+            archivo.WriteLine("" & paso & "")
+            archivo.WriteLine("" & Bpx & "") '35
+            archivo.WriteLine("" & iee & "") '36
+            archivo.WriteLine("" & AT & "") '37
+            archivo.WriteLine("" & Ax & "") '38
+            archivo.WriteLine("" & densidad_aire & "") '39
+            archivo.WriteLine("" & area_amidship & "") '40
+            archivo.WriteLine("" & areaT_bulbo & "") '40
+            archivo.WriteLine("" & centroV_area_bulbo & "") '40
             archivo.close()
         Catch ex As Exception
 
@@ -674,12 +657,8 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
         fuente2.Value = ds.Tables(2)
     End Sub
     Private Sub PlaneoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlaneoToolStripMenuItem.Click
-        If metodo_holtrop = False And metodo_savitsky = False Then
-            MsgBox("Seleccionar al menos un método de cálculo.", MsgBoxStyle.Exclamation, "INFORMACIÓN IMPORTANTE")
-        Else
-            form_datos_savitsky.MdiParent = Me
-            form_datos_savitsky.Show()
-        End If
+       form_datos_savitsky.MdiParent = Me
+        form_datos_savitsky.Show()
 
     End Sub
 
@@ -714,5 +693,37 @@ ByVal e As System.Windows.Forms.PaintEventArgs)
             End If
 
         End If
+    End Sub
+
+    Private Sub SOLUCIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SOLUCIÓNToolStripMenuItem.Click
+        Form_solucion_Holtrop_mennem.MdiParent = Me
+        Form_solucion_Holtrop_mennem.Show()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem1.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub RangosApliaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RangosApliaciónToolStripMenuItem.Click
+        Form_verificar_savitsky.MdiParent = Me
+        Form_verificar_savitsky.Show()
+
+        Form_verificar_holtrop.MdiParent = Me
+        Form_verificar_holtrop.Show()
+
+    End Sub
+
+    Private Sub InformaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformaciónToolStripMenuItem.Click
+        Informacion.MdiParent = Me
+        Informacion.Show()
+    End Sub
+
+    Private Sub AireToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AireToolStripMenuItem.Click
+        Form_datos_raire.MdiParent = Me
+        Form_datos_raire.Show()
     End Sub
 End Class

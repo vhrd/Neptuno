@@ -25,6 +25,7 @@ Partial Class Form_datos_raire
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_datos_raire))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_coef_arrastre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_velocidad_viento = New System.Windows.Forms.TextBox()
@@ -36,7 +37,6 @@ Partial Class Form_datos_raire
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,6 +58,15 @@ Partial Class Form_datos_raire
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Resistencia por aire"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(18, 166)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(141, 18)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Nota: 0.8 < Cd <1.2 "
         '
         'txt_coef_arrastre
         '
@@ -136,7 +145,7 @@ Partial Class Form_datos_raire
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(105, 35)
         Me.btn_salir.TabIndex = 12
-        Me.btn_salir.Text = "Salir"
+        Me.btn_salir.Text = "Cancelar"
         Me.btn_salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_salir.UseVisualStyleBackColor = True
         '
@@ -147,18 +156,9 @@ Partial Class Form_datos_raire
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(105, 35)
         Me.btn_guardar.TabIndex = 11
-        Me.btn_guardar.Text = "Guardar"
+        Me.btn_guardar.Text = "OK"
         Me.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_guardar.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 166)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 18)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Nota: 0.8 < Cd <1.2 "
         '
         'Form_datos_raire
         '
